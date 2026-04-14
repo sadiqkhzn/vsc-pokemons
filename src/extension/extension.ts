@@ -6,6 +6,7 @@ import {
   getDefaultPokemon as getDefaultPokemonType,
   getPokemonByGeneration,
   getRandomPokemonConfig,
+  getFlyingPokemon,
   POKEMON_DATA,
 } from '../common/pokemon-data';
 import {
@@ -368,6 +369,9 @@ function getWebview(): vscode.Webview | undefined {
 }
 
 export function activate(context: vscode.ExtensionContext) {
+  // Store globalState reference for status bar
+  globalState = context.globalState;
+
   // Reset the Pokemon translations cache at startup to load the correct language
   localize.resetPokemonTranslationsCache();
 
@@ -1022,6 +1026,69 @@ export function activate(context: vscode.ExtensionContext) {
     ),
   );
 
+  // Spawn flying pokémon command
+  context.subscriptions.push(
+    vscode.commands.registerCommand(
+      'vscode-pokemon.spawn-flying-pokemon',
+      async () => {
+        const panel = getPokemonPanel();
+        if (
+          getConfigurationPosition() === ExtPosition.explorer &&
+          webviewViewProvider
+        ) {
+          await vscode.commands.executeCommand('pokemonView.focus');
+        }
+        if (panel) {
+          const flyingTypes = getFlyingPokemon();
+          const flyingOptions = flyingTypes.map((type) => ({
+            label: localize.getLocalizedPokemonName(type),
+            value: type,
+            description: `#${POKEMON_DATA[type].id
+              .toString()
+              .padStart(4, '0')} - Gen ${POKEMON_DATA[type].generation} ✈️`,
+          }));
+
+          const picked = await vscode.window.showQuickPick(flyingOptions, {
+            placeHolder: vscode.l10n.t('Select a Flying Pokémon'),
+            matchOnDescription: true,
+          });
+
+          if (!picked) {
+            return;
+          }
+
+          const name = await vscode.window.showInputBox({
+            placeHolder: vscode.l10n.t('Leave blank for a random name'),
+            prompt: vscode.l10n.t('Name your Flying Pokémon'),
+            value: randomName(),
+          });
+
+          if (name === undefined) {
+            return;
+          }
+
+          const possibleColors = availableColors(picked.value);
+          const spec = new PokemonSpecification(
+            maybeMakeShiny(possibleColors),
+            picked.value,
+            getConfiguredSize(),
+            name,
+          );
+
+          panel.spawnPokemon(spec);
+          var collection = PokemonSpecification.collectionFromMemento(
+            context,
+            getConfiguredSize(),
+          );
+          collection.push(spec);
+          await storeCollectionAsMemento(context, collection);
+        } else {
+          await createPokemonPlayground(context);
+        }
+      },
+    ),
+  );
+
   // Listening to configuration changes
   context.subscriptions.push(
     vscode.workspace.onDidChangeConfiguration(
@@ -1101,10 +1168,35 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 function updateStatusBar(): void {
-  spawnPokemonStatusBar.text = `$(squirrel)`;
+  const collection = getStatusBarPokemonInfo();
+  if (collection) {
+    spawnPokemonStatusBar.text = `$(squirrel) ${collection}`;
+  } else {
+    spawnPokemonStatusBar.text = `$(squirrel)`;
+  }
   spawnPokemonStatusBar.tooltip = vscode.l10n.t('Spawn Pokemon');
   spawnPokemonStatusBar.show();
 }
+
+function getStatusBarPokemonInfo(): string | undefined {
+  try {
+    const types =
+      globalState?.get<PokemonType[]>(EXTRA_POKEMON_KEY_TYPES) ?? [];
+    const names = globalState?.get<string[]>(EXTRA_POKEMON_KEY_NAMES) ?? [];
+    if (types.length > 0 && names.length > 0) {
+      const lastType = types[types.length - 1];
+      const lastName = names[names.length - 1];
+      const isFlying = POKEMON_DATA[lastType]?.isFlying;
+      const icon = isFlying ? '🐦' : '🐾';
+      return `${icon} ${lastName}`;
+    }
+  } catch {
+    // Ignore errors
+  }
+  return undefined;
+}
+
+let globalState: vscode.Memento | undefined;
 
 export function spawnPokemonDeactivate() {
   spawnPokemonStatusBar.dispose();

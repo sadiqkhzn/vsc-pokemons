@@ -8,6 +8,7 @@ import {
   ColorThemeKind,
   WebviewMessage,
 } from '../common/types';
+import { isPokemonFlying } from '../common/pokemon-data';
 import { IPokemonType } from './states';
 import {
   createPokemon,
@@ -133,7 +134,9 @@ function addPokemonToPanel(
   incrementCounter: boolean = true,
 ): PokemonElement {
   var pokemonSpriteElement: HTMLImageElement = document.createElement('img');
-  pokemonSpriteElement.className = 'pokemon';
+  pokemonSpriteElement.className = isPokemonFlying(pokemonType)
+    ? 'pokemon flying'
+    : 'pokemon';
   (document.getElementById('pokemonContainer') as HTMLDivElement).appendChild(
     pokemonSpriteElement,
   );

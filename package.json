@@ -1,31 +1,33 @@
 {
-    "name": "vscode-pokemon",
-    "displayName": "vscode-pokemon",
-    "description": "Pokémon for your VS Code",
-    "version": "4.3.5",
+    "name": "vsc-pokemons",
+    "displayName": "VS Code Pokémons",
+    "description": "Bring magical Pokémon companions to life in your VS Code workspace with stunning animations and flying creatures",
+    "version": "1.0.0",
     "engines": {
         "vscode": "^1.73.0"
     },
     "l10n": "./l10n",
     "repository": {
-        "type": "github",
-        "url": "https://github.com/jakobhoeg/vscode-pokemon"
+        "type": "git",
+        "url": "https://github.com/sadiqkhzn/vsc-pokemons.git"
     },
-    "homepage": "https://github.com/jakobhoeg/vscode-pokemon",
-    "bugs": "https://github.com/jakobhoeg/vscode-pokemon/issues",
-    "publisher": "jakobhoeg",
+    "homepage": "https://github.com/sadiqkhzn/vsc-pokemons#readme",
+    "bugs": "https://github.com/sadiqkhzn/vsc-pokemons/issues",
+    "publisher": "vsc-pokemons",
     "pricing": "Free",
     "categories": [
         "Other"
     ],
     "keywords": [
-        "pokemon",
-        "pets",
         "pokémon",
-        "pixelart",
-        "pixel",
-        "pixel",
-        "vscode"
+        "pokemon",
+        "companions",
+        "animations",
+        "flying",
+        "pets",
+        "fun",
+        "workspace",
+        "entertainment"
     ],
     "license": "MIT",
     "icon": "icon.png",
@@ -33,6 +35,7 @@
         "onCommand:vscode-pokemon.start",
         "onCommand:vscode-pokemon.spawn-pokemon",
         "onCommand:vscode-pokemon.spawn-random-pokemon",
+        "onCommand:vscode-pokemon.spawn-flying-pokemon",
         "onCommand:vscode-pokemon.delete-pokemon",
         "onCommand:vscode-pokemon.remove-all-pokemon",
         "onCommand:vscode-pokemon.roll-call",
@@ -81,23 +84,23 @@
         "commands": [
             {
                 "command": "vscode-pokemon.start",
-                "title": "Start pokemon coding session",
-                "category": "Pokemon Coding"
+                "title": "Launch Pokémon Workspace",
+                "category": "Pokémon Companions"
             },
             {
                 "command": "vscode-pokemon.export-pokemon-list",
-                "title": "Export pokemon list",
-                "category": "Pokemon Coding"
+                "title": "Export Pokémon Collection",
+                "category": "Pokémon Companions"
             },
             {
                 "command": "vscode-pokemon.import-pokemon-list",
-                "title": "Import pokemon list",
-                "category": "Pokemon Coding"
+                "title": "Import Pokémon Collection",
+                "category": "Pokémon Companions"
             },
             {
                 "command": "vscode-pokemon.spawn-pokemon",
-                "title": "Spawn additional pokemon",
-                "category": "Pokemon Coding",
+                "title": "Add New Pokémon Companion",
+                "category": "Pokémon Companions",
                 "icon": {
                     "dark": "media/icon/dark-add.svg",
                     "light": "media/icon/light-add.svg"
@@ -105,17 +108,26 @@
             },
             {
                 "command": "vscode-pokemon.spawn-random-pokemon",
-                "title": "Spawn random additional pokemon",
-                "category": "Pokemon Coding",
+                "title": "Surprise Me with a Random Pokémon",
+                "category": "Pokémon Companions",
                 "icon": {
                     "dark": "media/icon/dark-random.svg",
                     "light": "media/icon/light-random.svg"
                 }
             },
             {
+                "command": "vscode-pokemon.spawn-flying-pokemon",
+                "title": "Add Flying Pokémon Companion",
+                "category": "Pokémon Companions",
+                "icon": {
+                    "dark": "media/icon/dark-add.svg",
+                    "light": "media/icon/light-add.svg"
+                }
+            },
+            {
                 "command": "vscode-pokemon.delete-pokemon",
-                "title": "Remove pokemon",
-                "category": "Pokemon Coding",
+                "title": "Remove Pokémon Companion",
+                "category": "Pokémon Companions",
                 "icon": {
                     "dark": "media/icon/dark-trash.svg",
                     "light": "media/icon/light-trash.svg"
@@ -123,8 +135,8 @@
             },
             {
                 "command": "vscode-pokemon.remove-all-pokemon",
-                "title": "Remove all pokemon",
-                "category": "Pokemon Coding",
+                "title": "Clear All Pokémon",
+                "category": "Pokémon Companions",
                 "icon": {
                     "dark": "media/icon/dark-trash.svg",
                     "light": "media/icon/light-trash.svg"
@@ -132,18 +144,18 @@
             },
             {
                 "command": "vscode-pokemon.roll-call",
-                "title": "Roll-call",
-                "category": "Pokemon Coding"
+                "title": "Pokémon Roll Call",
+                "category": "Pokémon Companions"
             },
             {
                 "command": "vscode-pokemon.configure-keybindings",
-                "title": "Configure keybindings",
-                "category": "Pokemon Coding"
+                "title": "Configure Keyboard Shortcuts",
+                "category": "Pokémon Companions"
             },
             {
                 "command": "vscode-pokemon.change-pokemon-language",
-                "title": "Change Pokemon language",
-                "category": "Pokemon Coding"
+                "title": "Change Pokémon Language",
+                "category": "Pokémon Companions"
             }
         ],
         "keybindings": [
@@ -158,6 +170,11 @@
                 "mac": "alt+shift+q"
             },
             {
+                "command": "vscode-pokemon.spawn-flying-pokemon",
+                "key": "alt+shift+f",
+                "mac": "alt+shift+f"
+            },
+            {
                 "command": "vscode-pokemon.delete-pokemon",
                 "key": "alt+shift+d",
                 "mac": "alt+shift+d"
@@ -170,7 +187,7 @@
         ],
         "configuration": [
             {
-                "title": "VS Code Pokemon",
+                "title": "Pokémon Companions",
                 "properties": {
                     "vscode-pokemon.pokemonSize": {
                         "type": "string",
@@ -181,7 +198,7 @@
                             "large"
                         ],
                         "default": "medium",
-                        "description": "Pokemon size"
+                        "description": "Size of your Pokémon companions"
                     },
                     "vscode-pokemon.position": {
                         "type": "string",
@@ -190,7 +207,7 @@
                             "explorer"
                         ],
                         "default": "explorer",
-                        "description": "VSCode pokemon webview position"
+                        "description": "Where to display your Pokémon companions in VS Code"
                     },
                     "vscode-pokemon.theme": {
                         "type": "string",
@@ -201,7 +218,7 @@
                             "beach"
                         ],
                         "default": "none",
-                        "description": "Background theme assets for your pokemon"
+                        "description": "Choose a beautiful background theme for your Pokémon world"
                     },
                     "vscode-pokemon.defaultPokemon": {
                         "type": "array",
@@ -222,13 +239,13 @@
                             ]
                         },
                         "default": [],
-                        "description": "List of default pokemon to automatically spawn on startup. Each pokemon should have a 'type' (required), and optionally 'name'. Example: [{\"type\": \"pikachu\", \"name\": \"Sparky\"}, {\"type\": \"charizard\"}]"
+                        "description": "Your favorite Pokémon companions to welcome you each time you open VS Code. Add their type and give them special names! Example: [{\"type\": \"pikachu\", \"name\": \"Sparky\"}, {\"type\": \"charizard\"}]"
                     },
                     "vscode-pokemon.shinyOdds": {
                         "type": "number",
                         "default": 8192,
                         "minimum": 1,
-                        "description": "Odds (1 in N) for a Pokémon to be shiny. Lower = more shinies. Default is 8192."
+                        "description": "How rare should shiny Pokémon be? Lower numbers = more sparkly friends! (1 in N chance)"
                     },
                     "vscode-pokemon.pokemonLanguage": {
                         "type": "string",
@@ -240,7 +257,7 @@
                             "ja-JP"
                         ],
                         "default": "auto",
-                        "description": "Language for Pokemon names. 'auto' uses VS Code's language, or you can choose a specific language (e.g., 'fr-FR' for French, 'en-US' for English, 'de-DE' for German, 'ja-JP' for Japanese). Only official Pokemon languages are supported."
+                        "description": "Choose the language for your Pokémon names. Select 'auto' to match VS Code's language, or pick your favorite: English, French, German, or Japanese"
                     }
                 }
             }

@@ -58,6 +58,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Charizard!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   squirtle: {
     id: 7,
@@ -100,6 +101,8 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Butterfree!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
+    hasFlySprite: true,
   },
   weedle: {
     id: 13,
@@ -128,6 +131,8 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Pidgey!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
+    hasFlySprite: true,
   },
   pidgeotto: {
     id: 17,
@@ -135,6 +140,8 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Pidgeotto!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
+    hasFlySprite: true,
   },
   pidgeot: {
     id: 18,
@@ -142,6 +149,8 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Pidgeot!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
+    hasFlySprite: true,
   },
   rattata: {
     id: 19,
@@ -163,6 +172,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Spearow!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   fearow: {
     id: 22,
@@ -170,6 +180,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Fearow!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   ekans: {
     id: 23,
@@ -310,6 +321,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Zubat!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   golbat: {
     id: 42,
@@ -317,6 +329,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Golbat!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   oddish: {
     id: 43,
@@ -366,6 +379,8 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Venomoth!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
+    hasFlySprite: true,
   },
   diglett: {
     id: 50,
@@ -604,6 +619,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: "Farfetch'd!",
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   doduo: {
     id: 84,
@@ -611,6 +627,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Doduo!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   dodrio: {
     id: 85,
@@ -618,6 +635,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Dodrio!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   seel: {
     id: 86,
@@ -884,6 +902,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Scyther!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   jynx: {
     id: 124,
@@ -1017,6 +1036,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Aerodactyl!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   snorlax: {
     id: 143,
@@ -1031,6 +1051,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Articuno!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   zapdos: {
     id: 145,
@@ -1038,6 +1059,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Zapdos!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   moltres: {
     id: 146,
@@ -1045,6 +1067,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Moltres!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   dratini: {
     id: 147,
@@ -1066,6 +1089,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Dragonite!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   mewtwo: {
     id: 150,
@@ -1080,6 +1104,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Mew!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   // Generation 2
   chikorita: {
@@ -1172,6 +1197,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Hoothoot!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   noctowl: {
     id: 164,
@@ -1179,6 +1205,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Noctowl!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   ledyba: {
     id: 165,
@@ -1186,6 +1213,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Ledyba!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   ledian: {
     id: 166,
@@ -1193,6 +1221,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Ledian!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   spinarak: {
     id: 167,
@@ -1214,6 +1243,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Crobat!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   chinchou: {
     id: 170,
@@ -1270,6 +1300,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Togetic!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   natu: {
     id: 177,
@@ -1284,6 +1315,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Xatu!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   mareep: {
     id: 179,
@@ -1424,6 +1456,8 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Murkrow!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
+    hasFlySprite: true,
   },
   slowking: {
     id: 199,
@@ -1683,6 +1717,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Gligar!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   steelix: {
     id: 208,
@@ -1825,6 +1860,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Delibird!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   mantine: {
     id: 226,
@@ -1832,6 +1868,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Mantine!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   skarmory: {
     id: 227,
@@ -1839,6 +1876,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Skarmory!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   houndour: {
     id: 228,
@@ -1994,6 +2032,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Lugia!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     originalSpriteSize: 64,
+    isFlying: true,
   },
   hooh: {
     id: 250,
@@ -2002,6 +2041,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Ho-Oh!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     originalSpriteSize: 64,
+    isFlying: true,
   },
   celebi: {
     id: 251,
@@ -2009,6 +2049,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Celebi!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   // Generation 3
   treecko: {
@@ -2122,6 +2163,8 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Beautifly!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
+    hasFlySprite: true,
   },
   cascoon: {
     id: 268,
@@ -2136,6 +2179,8 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Dustox!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
+    hasFlySprite: true,
   },
   lotad: {
     id: 270,
@@ -2185,6 +2230,8 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Taillow!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
+    hasFlySprite: true,
   },
   swellow: {
     id: 277,
@@ -2192,6 +2239,8 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Swellow!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
+    hasFlySprite: true,
   },
   wingull: {
     id: 278,
@@ -2199,6 +2248,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Wingull!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   pelipper: {
     id: 279,
@@ -2206,6 +2256,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Pelipper!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   ralts: {
     id: 280,
@@ -2241,6 +2292,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Masquerain!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   shroomish: {
     id: 285,
@@ -2290,6 +2342,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Ninjask!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   shedinja: {
     id: 292,
@@ -2297,6 +2350,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Shedinja!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   whismur: {
     id: 293,
@@ -2557,6 +2611,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Vibrava!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   flygon: {
     id: 330,
@@ -2564,6 +2619,8 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Flygon!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
+    hasFlySprite: true,
   },
   cacnea: {
     id: 331,
@@ -2585,6 +2642,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Swablu!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   altaria: {
     id: 334,
@@ -2592,6 +2650,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Altaria!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   zangoose: {
     id: 335,
@@ -2753,6 +2812,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Tropius!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   chimecho: {
     id: 358,
@@ -2865,6 +2925,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Salamence!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   beldum: {
     id: 374,
@@ -2914,6 +2975,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Latias!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   latios: {
     id: 381,
@@ -2921,6 +2983,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Latios!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   kyogre: {
     id: 382,
@@ -2945,6 +3008,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Rayquaza!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     originalSpriteSize: 64,
+    isFlying: true,
   },
   jirachi: {
     id: 385,
@@ -3055,6 +3119,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Starly!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   staravia: {
     id: 397,
@@ -3062,6 +3127,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Staravia!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   staraptor: {
     id: 398,
@@ -3069,6 +3135,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Staraptor!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   bidoof: {
     id: 399,
@@ -3212,6 +3279,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Mothim!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   combee_male: {
     id: 415,
@@ -3219,6 +3287,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Combee!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   combee_female: {
     id: 415,
@@ -3226,6 +3295,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Combee!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   vespiquen: {
     id: 416,
@@ -3233,6 +3303,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Vespiquen!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   pachirisu: {
     id: 417,
@@ -3311,6 +3382,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Drifloon!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   drifblim: {
     id: 426,
@@ -3318,6 +3390,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Drifblim!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   buneary: {
     id: 427,
@@ -3347,6 +3420,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Honchkrow!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   glameow: {
     id: 431,
@@ -3424,6 +3498,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Chatot!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   spiritomb: {
     id: 442,
@@ -3654,6 +3729,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Togekiss!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     extraSprites: [PokemonExtraSprite.leftFacing],
+    isFlying: true,
   },
   yanmega: {
     id: 469,
@@ -3661,6 +3737,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Yanmega!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   leafeon: {
     id: 470,
@@ -3682,6 +3759,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Gliscor!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   mamoswine: {
     id: 473,
@@ -3842,6 +3920,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Cresselia!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    isFlying: true,
   },
   phione: {
     id: 489,
@@ -3878,6 +3957,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Shaymin!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     extraSprites: [PokemonExtraSprite.leftFacing],
+    isFlying: true,
   },
   arceus: {
     id: 493,
@@ -4036,4 +4116,18 @@ export function getRandomPokemonConfig(): [PokemonType, PokemonConfig] {
   const keys = Object.keys(POKEMON_DATA);
   const randomKey = keys[Math.floor(Math.random() * keys.length)];
   return [randomKey as PokemonType, POKEMON_DATA[randomKey]];
+}
+
+export function getFlyingPokemon(): PokemonType[] {
+  return Object.entries(POKEMON_DATA)
+    .filter(([, config]) => config.isFlying === true)
+    .map(([key]) => key as PokemonType);
+}
+
+export function isPokemonFlying(type: string): boolean {
+  return POKEMON_DATA[type]?.isFlying === true;
+}
+
+export function hasPokemonFlySprite(type: string): boolean {
+  return POKEMON_DATA[type]?.hasFlySprite === true;
 }

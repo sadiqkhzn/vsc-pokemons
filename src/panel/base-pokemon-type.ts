@@ -199,6 +199,10 @@ export abstract class BasePokemonType implements IPokemonType {
     }
   }
 
+  get flyingSpriteLabel(): string {
+    return 'walk'; // Default: no fly sprite, use walk
+  }
+
   randomizeSpeed(speed: number): number {
     const min = speed * 0.7;
     const max = speed * 1.3;

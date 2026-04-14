@@ -4,7 +4,9 @@ import {
   PokemonSpeed,
   PokemonType,
 } from '../common/types';
+import { isPokemonFlying } from '../common/pokemon-data';
 import { Pokemon } from './pokemon';
+import { FlyingPokemon } from './flying-pokemon';
 import { IPokemonType } from './states';
 
 export class PokemonElement {
@@ -171,7 +173,8 @@ export function createPokemon(
   }
 
   try {
-    return new Pokemon(
+    const PokemonClass = isPokemonFlying(pokemonType) ? FlyingPokemon : Pokemon;
+    return new PokemonClass(
       pokemonType,
       el,
       collision,

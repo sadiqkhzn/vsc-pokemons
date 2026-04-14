@@ -26,6 +26,8 @@ export interface PokemonConfig {
   possibleColors: PokemonColor[];
   originalSpriteSize?: number;
   extraSprites?: PokemonExtraSprite[];
+  isFlying?: boolean;
+  hasFlySprite?: boolean;
 }
 
 export const enum PokemonExtraSprite {

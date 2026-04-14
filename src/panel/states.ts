@@ -25,6 +25,9 @@ export interface IPokemonType {
   width: number;
   floor: number;
 
+  // Flying
+  flyingSpriteLabel: string;
+
   // Friends API
   name: string;
   emoji: string;
@@ -80,6 +83,10 @@ export const enum States {
   chaseFriend = 'chase-friend',
   standRight = 'stand-right',
   standLeft = 'stand-left',
+  flyRight = 'fly-right',
+  flyLeft = 'fly-left',
+  hover = 'hover',
+  glideDown = 'glide-down',
 }
 
 export enum FrameResult {
@@ -110,7 +117,11 @@ export function isStateAboveGround(state: States): boolean {
     state === States.climbWallLeft ||
     state === States.jumpDownLeft ||
     state === States.land ||
-    state === States.wallHangLeft
+    state === States.wallHangLeft ||
+    state === States.flyRight ||
+    state === States.flyLeft ||
+    state === States.hover ||
+    state === States.glideDown
   );
 }
 
@@ -146,6 +157,14 @@ export function resolveState(state: string, pokemon: IPokemonType): IState {
       return new StandRightState(pokemon);
     case States.standLeft:
       return new StandLeftState(pokemon);
+    case States.flyRight:
+      return new FlyRightState(pokemon);
+    case States.flyLeft:
+      return new FlyLeftState(pokemon);
+    case States.hover:
+      return new HoverState(pokemon);
+    case States.glideDown:
+      return new GlideDownState(pokemon);
   }
   return new SitIdleState(pokemon);
 }
@@ -433,4 +452,166 @@ export class StandLeftState extends AbstractStaticState {
   spriteLabel = 'stand';
   horizontalDirection = HorizontalDirection.left;
   holdTime = 60;
+}
+
+export class FlyRightState implements IState {
+  label = States.flyRight;
+  spriteLabel: string;
+  horizontalDirection = HorizontalDirection.right;
+  pokemon: IPokemonType;
+  private frameCount = 0;
+  private flyHeight: number;
+  private amplitude = 15;
+  private frequency = 0.08;
+
+  constructor(pokemon: IPokemonType) {
+    this.pokemon = pokemon;
+    this.spriteLabel = pokemon.flyingSpriteLabel;
+    // Start flying at current height or pick a random altitude
+    this.flyHeight =
+      pokemon.bottom > pokemon.floor + 20
+        ? pokemon.bottom
+        : pokemon.floor + 40 + Math.random() * 60;
+    this.pokemon.positionBottom(this.flyHeight);
+  }
+
+  nextFrame(): FrameResult {
+    this.frameCount++;
+
+    // Horizontal movement
+    this.pokemon.positionLeft(this.pokemon.left + this.pokemon.speed * 1.2);
+
+    // Vertical bobbing using sine wave
+    const bob = Math.sin(this.frameCount * this.frequency) * this.amplitude;
+    this.pokemon.positionBottom(this.flyHeight + bob);
+
+    // Random chance to change state
+    if (this.frameCount > 30 && Math.random() < 0.015) {
+      return FrameResult.stateComplete;
+    }
+
+    // Boundary check
+    if (this.pokemon.left >= window.innerWidth * 0.95 - this.pokemon.width) {
+      return FrameResult.stateComplete;
+    }
+
+    return FrameResult.stateContinue;
+  }
+}
+
+export class FlyLeftState implements IState {
+  label = States.flyLeft;
+  spriteLabel: string;
+  horizontalDirection = HorizontalDirection.left;
+  pokemon: IPokemonType;
+  private frameCount = 0;
+  private flyHeight: number;
+  private amplitude = 15;
+  private frequency = 0.08;
+
+  constructor(pokemon: IPokemonType) {
+    this.pokemon = pokemon;
+    this.spriteLabel = pokemon.flyingSpriteLabel;
+    this.flyHeight =
+      pokemon.bottom > pokemon.floor + 20
+        ? pokemon.bottom
+        : pokemon.floor + 40 + Math.random() * 60;
+    this.pokemon.positionBottom(this.flyHeight);
+  }
+
+  nextFrame(): FrameResult {
+    this.frameCount++;
+
+    // Horizontal movement
+    this.pokemon.positionLeft(this.pokemon.left - this.pokemon.speed * 1.2);
+
+    // Vertical bobbing
+    const bob = Math.sin(this.frameCount * this.frequency) * this.amplitude;
+    this.pokemon.positionBottom(this.flyHeight + bob);
+
+    // Random chance to change state
+    if (this.frameCount > 30 && Math.random() < 0.015) {
+      return FrameResult.stateComplete;
+    }
+
+    // Boundary check
+    if (this.pokemon.left <= 0) {
+      return FrameResult.stateComplete;
+    }
+
+    return FrameResult.stateContinue;
+  }
+}
+
+export class HoverState implements IState {
+  label = States.hover;
+  spriteLabel = 'idle';
+  horizontalDirection = HorizontalDirection.right;
+  pokemon: IPokemonType;
+  private frameCount = 0;
+  private holdTime: number;
+  private flyHeight: number;
+  private amplitude = 5;
+  private frequency = 0.06;
+
+  constructor(pokemon: IPokemonType) {
+    this.pokemon = pokemon;
+    this.holdTime = 40 + Math.floor(Math.random() * 40);
+    this.flyHeight =
+      pokemon.bottom > pokemon.floor + 20
+        ? pokemon.bottom
+        : pokemon.floor + 40 + Math.random() * 60;
+    this.pokemon.positionBottom(this.flyHeight);
+  }
+
+  nextFrame(): FrameResult {
+    this.frameCount++;
+
+    // Gentle hovering bob
+    const bob = Math.sin(this.frameCount * this.frequency) * this.amplitude;
+    this.pokemon.positionBottom(this.flyHeight + bob);
+
+    if (this.frameCount > this.holdTime) {
+      return FrameResult.stateComplete;
+    }
+    return FrameResult.stateContinue;
+  }
+}
+
+export class GlideDownState implements IState {
+  label = States.glideDown;
+  spriteLabel = 'walk';
+  horizontalDirection = HorizontalDirection.right;
+  pokemon: IPokemonType;
+  private frameCount = 0;
+
+  constructor(pokemon: IPokemonType) {
+    this.pokemon = pokemon;
+    // Randomly pick horizontal direction
+    if (Math.random() > 0.5) {
+      this.horizontalDirection = HorizontalDirection.left;
+    }
+  }
+
+  nextFrame(): FrameResult {
+    this.frameCount++;
+
+    // Gradual descent
+    this.pokemon.positionBottom(this.pokemon.bottom - 1.5);
+
+    // Slight horizontal drift
+    const drift =
+      this.horizontalDirection === HorizontalDirection.right
+        ? this.pokemon.speed * 0.5
+        : -this.pokemon.speed * 0.5;
+    this.pokemon.positionLeft(this.pokemon.left + drift);
+
+    // Landed
+    if (this.pokemon.bottom <= this.pokemon.floor) {
+      this.pokemon.positionBottom(this.pokemon.floor);
+      return FrameResult.stateComplete;
+    }
+
+    return FrameResult.stateContinue;
+  }
 }

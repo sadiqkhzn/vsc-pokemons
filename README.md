@@ -1,102 +1,109 @@
-<div align='center'>
+# VS Code Pokémons
 
-# VS Code Pokémon
+**Transform your coding workspace into a magical Pokémon world!**
 
-![icon](https://github.com/jakobhoeg/vscode-pokemon/raw/main/icon.png)
-</div>
+Bring beloved Pokémon companions to life in your VS Code editor with stunning pixel art animations, flying creatures, and delightful interactions. Watch as your favorite Pokémon roam around your workspace while you code!
 
-<p align="center">
-    Puts cute Pokémon in your code editor to boost productivity ✨
-    <br>
-    <br>
-    <a href="https://github.com/jakobhoeg/vscode-pokemon/issues/new?assignees=&labels=feature&template=bug_report.md&title=">Report a Bug</a>
-    ·
-    <a href="https://github.com/jakobhoeg/vscode-pokemon/issues/new?assignees=&labels=feature&template=feature_request.md&title=">Request feature</a>
-</p>
+## Features
 
-<div align="center">
+**565+ Animated Pokémon** from Generations 1-4
+- Beautifully crafted pixel art sprites with smooth 8fps animations
+- Each Pokémon has unique idle and walking behaviors
 
-![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/jakobhoeg.vscode-pokemon)
-![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/jakobhoeg.vscode-pokemon)
-![Visual Studio Marketplace Downloads](https://img.shields.io/visual-studio-marketplace/d/jakobhoeg.vscode-pokemon)
+**Flying Pokémon Magic** 
+- 69 flying-type Pokémon with special aerial animations
+- 11 Pokémon feature authentic wing-flapping sprites
+- Watch them soar, glide, and gracefully land in your editor
 
-</div>
+**Smart AI Behaviors**
+- Advanced state machine with 20+ different behaviors
+- Pokémon interact with each other and follow mouse movements
+- Realistic movement patterns and collision detection
 
-<div align="center">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/jakobhoeg/vscode-pokemon/raw/main/vscode-pokemon.gif">
-  <source media="(prefers-color-scheme: light)" srcset="https://github.com/jakobhoeg/vscode-pokemon/raw/main/vscode-pokemon-light.gif">
-  <img alt="Shows gif in dark or light mode" src="https://github.com/jakobhoeg/vscode-pokemon/raw/main/vscode-pokemon-light.gif">
-</picture>
-</div>
+**Multilingual Support**
+- Pokémon names in English, French, German, and Japanese
+- Automatic language detection or manual selection
 
-<div align="center">
+**Beautiful Themes**
+- Multiple background themes: Forest, Castle, Beach, or None
+- Customizable sizes: Nano, Small, Medium, Large
+- Perfect integration with VS Code's dark and light themes
 
-Seen used by engineers at [Microsoft](https://code.visualstudio.com/updates/v1_101#_chat-ux-improvements)!
+**Shiny Pokémon**
+- Rare shiny variants with customizable encounter rates
+- Collect special sparkly versions of your favorites
 
-</div>
+## Getting Started
 
-## 💖 Support
-
-If you enjoy this project, please consider supporting me.
-Manually creating the `.gif` files for each sprite takes a lot of time and effort.
-Your sponsorship helps me dedicate more energy to improve and expand the project.
-
-[![GitHub Sponsor](https://img.shields.io/badge/Sponsor-❤-blue?style=flat&logo=github)](https://github.com/sponsors/jakobhoeg)
-
-## Installation
-
-Install this extension from the [VS Code marketplace](https://marketplace.visualstudio.com/items?itemName=jakobhoeg.vscode-pokemon) or the [Open VSX Registry](https://open-vsx.org/extension/jakobhoeg/vscode-pokemon).
-
-![Default view](https://github.com/jakobhoeg/vscode-pokemon/raw/main/install.png)
-
-OR
-
-With VS Code open, search for `vscode-pokemon` in the extension panel (`Ctrl+Shift+X` on Windows/Linux or `Cmd(⌘)+Shift+X` on MacOS) and click install.
-
-OR
-
-With VS Code open, launch VS Code Quick Open (`Ctrl+P` on Windows/Linux or `Cmd(⌘)+P` on MacOS), paste the following command, and press enter.
-
-`ext install jakobhoeg.vscode-pokemon`
-
-## Using VS Code Pokémon
-
-After installing, open the command palette with `Ctrl+Shift+P` on Windows/Linux or `Cmd(⌘)+Shift+P` on MacOS.
-
-Run the "Start Pokemon coding session" command (`vscode-pokemon.start`) to see a Bulbasaur in VS Code:
-
-![Default view](https://github.com/jakobhoeg/vscode-pokemon/raw/main/usage.png)
-
-Enjoy interacting with your favourite Pokémon!
+1. **Install** the extension from the VS Code Marketplace
+2. **Launch** your Pokémon workspace with `Ctrl+Shift+P` → "Launch Pokémon Workspace"
+3. **Add companions** using keyboard shortcuts or the Command Palette
 
 ## Keyboard Shortcuts
 
-VS Code Pokémon comes with default keyboard shortcuts to make managing your Pokémon quick and easy:
+- `Alt+Shift+W` - Add new Pokémon companion
+- `Alt+Shift+Q` - Surprise me with a random Pokémon  
+- `Alt+Shift+F` - Add flying Pokémon companion
+- `Alt+Shift+D` - Remove a Pokémon companion
+- `Alt+Shift+Backspace` - Clear all Pokémon
 
-![Keybindings](https://github.com/jakobhoeg/vscode-pokemon/raw/main/keybindings.png)
+## Commands
 
-### Configuring Keyboard Shortcuts
+Open the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`) and try:
 
-You can customize these shortcuts to match your preferences:
+- **Launch Pokémon Workspace** - Start your magical coding session
+- **Add New Pokémon Companion** - Choose from 565+ Pokémon
+- **Add Flying Pokémon Companion** - Specialized for aerial creatures
+- **Surprise Me with a Random Pokémon** - Let fate decide!
+- **Pokémon Roll Call** - See all your active companions
+- **Change Pokémon Language** - Switch between languages
 
-1. Open the command palette (`Ctrl+Shift+P` on Windows/Linux or `Cmd(⌘)+Shift+P` on MacOS)
-2. Run the **`Pokemon Coding: Configure keybindings`** command
-3. Select the command you want to customize
-4. VS Code will open the Keyboard Shortcuts editor filtered to that command
-5. Click the pencil icon next to the command and press your desired key combination
+## Customization
 
-## Changing settings
+Access settings via `File → Preferences → Settings` and search for "Pokémon":
 
-Open the setting panel with Ctrl+, on Windows/Linux or Cmd(⌘)+, on MacOS. In the search bar, enter “vscode-pokemon" to see all available options.
+- **Companion Size**: Choose from nano to large
+- **Background Theme**: Forest, Castle, Beach, or minimalist
+- **Workspace Position**: Panel or Explorer sidebar
+- **Shiny Encounter Rate**: Control how rare shiny Pokémon are
+- **Startup Companions**: Set your favorites to greet you every session
+- **Language**: Pick your preferred Pokémon names
 
-Set the size and position of the extension.
+## Special Features
+
+### Flying Pokémon Showcase
+Experience the magic of flying Pokémon with special animations:
+- **Butterfree** - Graceful butterfly movements
+- **Pidgeot** - Majestic soaring patterns  
+- **Dragonite** - Powerful aerial maneuvers
+- **Charizard** - Impressive flight displays
+
+### Persistent Companions
+Your Pokémon companions remember their positions and states between VS Code sessions, creating a consistent and delightful coding environment.
+
+### Collection Management
+- Export your Pokémon collection to share with friends
+- Import collections to quickly set up your perfect workspace
+- Automatic backup and restore functionality
+
+## Perfect For
+
+- **Developers** who love Pokémon and want a fun coding companion
+- **Streamers** looking to add personality to their coding sessions  
+- **Teams** wanting to create a more engaging workspace atmosphere
+- **Anyone** who enjoys pixel art and nostalgic gaming elements
+
+## Fun Facts
+
+- Over **10 hours** of unique animations across all Pokémon
+- **State-of-the-art** behavioral AI with realistic movement patterns
+- **PMD SpriteCollab** integration for authentic flying animations
+- **Zero performance impact** on your coding workflow
+
+## Settings
 
 ### Default Pokémon
-
-You can configure specific Pokémon to automatically appear when you first start using the extension. This is useful for setting up your preferred team without having to manually spawn them when you open new windows.
-
-To configure default Pokémon, add the following to your `settings.json`:
+Configure specific Pokémon to automatically appear when you start VS Code:
 
 ```json
 {
@@ -106,7 +113,7 @@ To configure default Pokémon, add the following to your `settings.json`:
       "name": "Sparky"
     },
     {
-      "type": "charizard",
+      "type": "charizard", 
       "name": "Flame"
     },
     {
@@ -116,59 +123,32 @@ To configure default Pokémon, add the following to your `settings.json`:
 }
 ```
 
-- **`type`** (required): The Pokémon species (e.g., `"pikachu"`, `"charizard"`, `"mewtwo"`)
-- **`name`** (optional): A custom name for your Pokémon. If not provided, a random name will be assigned
-- **`shiny`** (optional): Determines if the Pokémon is shiny, if not set will use `vscode-pokemon.shinyOdds` setting.
+### Language Support
+Choose from official Pokémon languages:
+- **English (US)** - Classic names like "Pikachu", "Charizard"
+- **French** - "Pikachu", "Dracaufeu" 
+- **German** - "Pikachu", "Glurak"
+- **Japanese** - "ピカチュウ", "リザードン"
 
-**Note:** The extension automatically saves your current Pokémon between sessions. The `defaultPokemon` setting is only used when:
-- You start the extension for the first time
-- You open a new windows/repository
-- You have removed all Pokémon (no saved session exists)
+### Size & Themes
+- **Sizes**: Nano, Small, Medium, Large
+- **Themes**: Forest, Castle, Beach, None
+- **Position**: Explorer panel or separate window
 
-To reset to your default Pokémon, use the "Remove all pokemon" command and restart VS Code.
+## Sprite Credits
 
-### Pokémon Language
+**Walk/Idle Sprites**: Pokémon sprites © The Pokémon Company / Nintendo / Game Freak. Used under fair use for non-commercial fan project.
 
-You can customize the language used for Pokémon names. The extension supports official Pokémon languages: English (US), French, German, and Japanese.
+**Flying Sprites**: From [PMD SpriteCollab](https://sprites.pmdcollab.org/) - Licensed [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/). Full artist credits available in the project repository.
 
-#### Using the Command
+---
 
-1. Open the command palette (`Ctrl+Shift+P` on Windows/Linux or `Cmd(⌘)+Shift+P` on MacOS)
-2. Run the **`Pokemon Coding: Change Pokemon language`** command
-3. Select your preferred language from the list
+**Ready to catch 'em all in VS Code?** Install now and transform your coding experience into a Pokémon adventure! 
 
-#### Using Settings
+*Made with ❤️ for Pokémon fans and developers worldwide*
 
-You can also configure the language directly in your `settings.json`:
+---
 
-```json
-{
-  "vscode-pokemon.pokemonLanguage": "fr-FR"
-}
-```
+## Disclaimer
 
-Available options:
-- **`auto`** (default): Automatically uses VS Code's language setting
-- **`en-US`**: English (US) names
-- **`fr-FR`**: French names (e.g., "Bulbizarre", "Salamèche", "Dracaufeu")
-- **`de-DE`**: German names (e.g., "Bisasam", "Glumanda", "Glurak")
-- **`ja-JP`**: Japanese names (e.g., "フシギダネ", "ヒトカゲ", "リザードン")
-
-**Note:** The language setting applies to all Pokémon names throughout the extension, including in the spawn selection menu, roll-call, and export features. Translations are available for all Pokémon from Generations 1, 2, 3, and 4.
-
-## Features
-
-Extracting and creating .gif files involves quite a bit of tedious manual work, but I’ll aim to add Gen 5 when possible.
-
-## Credits
-
-### Sprite Sources
-- Pokemon Sprites: © The Pokémon Company / Nintendo / Game Freak
-- The sprites are used for non-commercial, fan project purposes only
-- Original sprite artwork belongs to the respective copyright holders
-
-### Acknowledgments
-- All sprites are property of their original creators
-- This repository is a fan project and is not affiliated with Nintendo, The Pokémon Company, or Game Freak
-
-This repository is inspired by and based on [vscode-pets](https://github.com/tonybaloney/vscode-pets) by [tonybaloney](https://github.com/tonybaloney).
+This is a fan-made extension created purely for enjoyment and productivity. Not affiliated with, endorsed by, or supported by Nintendo, Game Freak, or The Pokémon Company. All Pokémon names, characters, and related assets are trademarks of their respective owners. This project is non-commercial and educational.
