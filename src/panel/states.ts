@@ -85,6 +85,10 @@ export const enum States {
   standLeft = 'stand-left',
   flyRight = 'fly-right',
   flyLeft = 'fly-left',
+  flyUpRight = 'fly-up-right',
+  flyUpLeft = 'fly-up-left',
+  flyDownRight = 'fly-down-right',
+  flyDownLeft = 'fly-down-left',
   hover = 'hover',
   glideDown = 'glide-down',
 }
@@ -120,6 +124,10 @@ export function isStateAboveGround(state: States): boolean {
     state === States.wallHangLeft ||
     state === States.flyRight ||
     state === States.flyLeft ||
+    state === States.flyUpRight ||
+    state === States.flyUpLeft ||
+    state === States.flyDownRight ||
+    state === States.flyDownLeft ||
     state === States.hover ||
     state === States.glideDown
   );
@@ -161,6 +169,14 @@ export function resolveState(state: string, pokemon: IPokemonType): IState {
       return new FlyRightState(pokemon);
     case States.flyLeft:
       return new FlyLeftState(pokemon);
+    case States.flyUpRight:
+      return new FlyUpRightState(pokemon);
+    case States.flyUpLeft:
+      return new FlyUpLeftState(pokemon);
+    case States.flyDownRight:
+      return new FlyDownRightState(pokemon);
+    case States.flyDownLeft:
+      return new FlyDownLeftState(pokemon);
     case States.hover:
       return new HoverState(pokemon);
     case States.glideDown:
@@ -463,35 +479,48 @@ export class FlyRightState implements IState {
   private flyHeight: number;
   private amplitude = 15;
   private frequency = 0.08;
+  private minHeight: number;
+  private maxHeight: number;
 
   constructor(pokemon: IPokemonType) {
     this.pokemon = pokemon;
     this.spriteLabel = pokemon.flyingSpriteLabel;
-    // Start flying at current height or pick a random altitude
+    // Enhanced height management for viewport bounds
+    this.minHeight = pokemon.floor + 50;
+    this.maxHeight = window.innerHeight * 0.8;
     this.flyHeight =
       pokemon.bottom > pokemon.floor + 20
-        ? pokemon.bottom
-        : pokemon.floor + 40 + Math.random() * 60;
+        ? Math.min(Math.max(pokemon.bottom, this.minHeight), this.maxHeight)
+        : this.minHeight + Math.random() * (this.maxHeight - this.minHeight) * 0.6;
     this.pokemon.positionBottom(this.flyHeight);
   }
 
   nextFrame(): FrameResult {
     this.frameCount++;
 
-    // Horizontal movement
-    this.pokemon.positionLeft(this.pokemon.left + this.pokemon.speed * 1.2);
-
-    // Vertical bobbing using sine wave
+    // Calculate next horizontal position
+    const nextLeft = this.pokemon.left + this.pokemon.speed * 1.1;
+    
+    // Enhanced vertical movement with bounds checking
     const bob = Math.sin(this.frameCount * this.frequency) * this.amplitude;
-    this.pokemon.positionBottom(this.flyHeight + bob);
+    const targetHeight = this.flyHeight + (this.frameCount * 0.1) + bob;
+    const clampedHeight = Math.min(Math.max(targetHeight, this.minHeight), this.maxHeight);
 
-    // Random chance to change state
-    if (this.frameCount > 30 && Math.random() < 0.015) {
+    // Clamp horizontal movement within viewport
+    const maxLeft = window.innerWidth - this.pokemon.width - 10;
+    const clampedLeft = Math.min(Math.max(nextLeft, 10), maxLeft);
+
+    // Apply clamped movement
+    this.pokemon.positionLeft(clampedLeft);
+    this.pokemon.positionBottom(clampedHeight);
+
+    // Random chance to change state after minimum flight time
+    if (this.frameCount > 35 && Math.random() < 0.013) {
       return FrameResult.stateComplete;
     }
 
-    // Boundary check
-    if (this.pokemon.left >= window.innerWidth * 0.95 - this.pokemon.width) {
+    // Complete if hit boundary
+    if (clampedLeft !== nextLeft) {
       return FrameResult.stateComplete;
     }
 
@@ -508,34 +537,48 @@ export class FlyLeftState implements IState {
   private flyHeight: number;
   private amplitude = 15;
   private frequency = 0.08;
+  private minHeight: number;
+  private maxHeight: number;
 
   constructor(pokemon: IPokemonType) {
     this.pokemon = pokemon;
     this.spriteLabel = pokemon.flyingSpriteLabel;
+    // Enhanced height management for viewport bounds
+    this.minHeight = pokemon.floor + 50;
+    this.maxHeight = window.innerHeight * 0.8;
     this.flyHeight =
       pokemon.bottom > pokemon.floor + 20
-        ? pokemon.bottom
-        : pokemon.floor + 40 + Math.random() * 60;
+        ? Math.min(Math.max(pokemon.bottom, this.minHeight), this.maxHeight)
+        : this.minHeight + Math.random() * (this.maxHeight - this.minHeight) * 0.6;
     this.pokemon.positionBottom(this.flyHeight);
   }
 
   nextFrame(): FrameResult {
     this.frameCount++;
 
-    // Horizontal movement
-    this.pokemon.positionLeft(this.pokemon.left - this.pokemon.speed * 1.2);
-
-    // Vertical bobbing
+    // Calculate next horizontal position
+    const nextLeft = this.pokemon.left - this.pokemon.speed * 1.1;
+    
+    // Enhanced vertical movement with bounds checking
     const bob = Math.sin(this.frameCount * this.frequency) * this.amplitude;
-    this.pokemon.positionBottom(this.flyHeight + bob);
+    const targetHeight = this.flyHeight + (this.frameCount * 0.1) + bob;
+    const clampedHeight = Math.min(Math.max(targetHeight, this.minHeight), this.maxHeight);
 
-    // Random chance to change state
-    if (this.frameCount > 30 && Math.random() < 0.015) {
+    // Clamp horizontal movement within viewport
+    const maxLeft = window.innerWidth - this.pokemon.width - 10;
+    const clampedLeft = Math.min(Math.max(nextLeft, 10), maxLeft);
+
+    // Apply clamped movement
+    this.pokemon.positionLeft(clampedLeft);
+    this.pokemon.positionBottom(clampedHeight);
+
+    // Random chance to change state after minimum flight time
+    if (this.frameCount > 35 && Math.random() < 0.013) {
       return FrameResult.stateComplete;
     }
 
-    // Boundary check
-    if (this.pokemon.left <= 0) {
+    // Complete if hit boundary
+    if (clampedLeft !== nextLeft) {
       return FrameResult.stateComplete;
     }
 
@@ -553,23 +596,36 @@ export class HoverState implements IState {
   private flyHeight: number;
   private amplitude = 5;
   private frequency = 0.06;
+  private minHeight: number;
+  private maxHeight: number;
 
   constructor(pokemon: IPokemonType) {
     this.pokemon = pokemon;
     this.holdTime = 40 + Math.floor(Math.random() * 40);
+    // Enhanced height management for viewport bounds
+    this.minHeight = pokemon.floor + 50;
+    this.maxHeight = window.innerHeight * 0.8;
     this.flyHeight =
       pokemon.bottom > pokemon.floor + 20
-        ? pokemon.bottom
-        : pokemon.floor + 40 + Math.random() * 60;
+        ? Math.min(Math.max(pokemon.bottom, this.minHeight), this.maxHeight)
+        : this.minHeight + Math.random() * (this.maxHeight - this.minHeight) * 0.6;
     this.pokemon.positionBottom(this.flyHeight);
   }
 
   nextFrame(): FrameResult {
     this.frameCount++;
 
-    // Gentle hovering bob
+    // Enhanced hovering with viewport bounds checking
     const bob = Math.sin(this.frameCount * this.frequency) * this.amplitude;
-    this.pokemon.positionBottom(this.flyHeight + bob);
+    const targetHeight = this.flyHeight + bob;
+    const clampedHeight = Math.min(Math.max(targetHeight, this.minHeight), this.maxHeight);
+    
+    // Also ensure horizontal position stays within bounds (in case Pokemon drifted)
+    const maxLeft = window.innerWidth - this.pokemon.width - 10;
+    const clampedLeft = Math.min(Math.max(this.pokemon.left, 10), maxLeft);
+    
+    this.pokemon.positionLeft(clampedLeft);
+    this.pokemon.positionBottom(clampedHeight);
 
     if (this.frameCount > this.holdTime) {
       return FrameResult.stateComplete;
@@ -609,6 +665,202 @@ export class GlideDownState implements IState {
     // Landed
     if (this.pokemon.bottom <= this.pokemon.floor) {
       this.pokemon.positionBottom(this.pokemon.floor);
+      return FrameResult.stateComplete;
+    }
+
+    return FrameResult.stateContinue;
+  }
+}
+
+export class FlyUpRightState implements IState {
+  label = States.flyUpRight;
+  spriteLabel: string;
+  horizontalDirection = HorizontalDirection.right;
+  pokemon: IPokemonType;
+  private frameCount = 0;
+  private maxHeight: number;
+  private amplitude = 10;
+  private frequency = 0.06;
+
+  constructor(pokemon: IPokemonType) {
+    this.pokemon = pokemon;
+    this.spriteLabel = pokemon.flyingSpriteLabel;
+    // Set maximum height to 80% of viewport to keep within bounds
+    this.maxHeight = window.innerHeight * 0.8;
+  }
+
+  nextFrame(): FrameResult {
+    this.frameCount++;
+
+    // Calculate next position but don't move yet
+    const nextLeft = this.pokemon.left + this.pokemon.speed * 0.8;
+    const nextBottom = this.pokemon.bottom + this.pokemon.speed * 0.6;
+    
+    // Add flight wobble
+    const wobble = Math.sin(this.frameCount * this.frequency) * this.amplitude;
+    const wobbledBottom = nextBottom + wobble * 0.1;
+
+    // Check boundaries before moving
+    const maxLeft = window.innerWidth - this.pokemon.width - 10; // 10px margin
+    const clampedLeft = Math.min(Math.max(nextLeft, 10), maxLeft);
+    const clampedBottom = Math.min(Math.max(wobbledBottom, this.pokemon.floor + 50), this.maxHeight);
+
+    // Apply clamped movement
+    this.pokemon.positionLeft(clampedLeft);
+    this.pokemon.positionBottom(clampedBottom);
+
+    // Random chance to change direction after minimum flight time
+    if (this.frameCount > 40 && Math.random() < 0.012) {
+      return FrameResult.stateComplete;
+    }
+
+    // Complete state if we hit boundaries
+    if (clampedLeft !== nextLeft || clampedBottom !== wobbledBottom) {
+      return FrameResult.stateComplete;
+    }
+
+    return FrameResult.stateContinue;
+  }
+}
+
+export class FlyUpLeftState implements IState {
+  label = States.flyUpLeft;
+  spriteLabel: string;
+  horizontalDirection = HorizontalDirection.left;
+  pokemon: IPokemonType;
+  private frameCount = 0;
+  private maxHeight: number;
+  private amplitude = 10;
+  private frequency = 0.06;
+
+  constructor(pokemon: IPokemonType) {
+    this.pokemon = pokemon;
+    this.spriteLabel = pokemon.flyingSpriteLabel;
+    this.maxHeight = window.innerHeight * 0.8;
+  }
+
+  nextFrame(): FrameResult {
+    this.frameCount++;
+
+    // Calculate next position but don't move yet
+    const nextLeft = this.pokemon.left - this.pokemon.speed * 0.8;
+    const nextBottom = this.pokemon.bottom + this.pokemon.speed * 0.6;
+    
+    // Add flight wobble
+    const wobble = Math.sin(this.frameCount * this.frequency) * this.amplitude;
+    const wobbledBottom = nextBottom + wobble * 0.1;
+
+    // Check boundaries before moving
+    const maxLeft = window.innerWidth - this.pokemon.width - 10;
+    const clampedLeft = Math.min(Math.max(nextLeft, 10), maxLeft);
+    const clampedBottom = Math.min(Math.max(wobbledBottom, this.pokemon.floor + 50), this.maxHeight);
+
+    // Apply clamped movement
+    this.pokemon.positionLeft(clampedLeft);
+    this.pokemon.positionBottom(clampedBottom);
+
+    // Random chance to change direction
+    if (this.frameCount > 40 && Math.random() < 0.012) {
+      return FrameResult.stateComplete;
+    }
+
+    // Complete state if we hit boundaries
+    if (clampedLeft !== nextLeft || clampedBottom !== wobbledBottom) {
+      return FrameResult.stateComplete;
+    }
+
+    return FrameResult.stateContinue;
+  }
+}
+
+export class FlyDownRightState implements IState {
+  label = States.flyDownRight;
+  spriteLabel: string;
+  horizontalDirection = HorizontalDirection.right;
+  pokemon: IPokemonType;
+  private frameCount = 0;
+  private minHeight: number;
+  private amplitude = 8;
+  private frequency = 0.05;
+
+  constructor(pokemon: IPokemonType) {
+    this.pokemon = pokemon;
+    this.spriteLabel = pokemon.flyingSpriteLabel;
+    // Set minimum flying height above ground Pokemon
+    this.minHeight = pokemon.floor + 50;
+  }
+
+  nextFrame(): FrameResult {
+    this.frameCount++;
+
+    // Calculate next position but don't move yet
+    const wobble = Math.sin(this.frameCount * this.frequency) * this.amplitude;
+    const nextLeft = this.pokemon.left + this.pokemon.speed * 0.8 + wobble * 0.1;
+    const nextBottom = this.pokemon.bottom - this.pokemon.speed * 0.4;
+
+    // Check boundaries before moving
+    const maxLeft = window.innerWidth - this.pokemon.width - 10;
+    const clampedLeft = Math.min(Math.max(nextLeft, 10), maxLeft);
+    const clampedBottom = Math.min(Math.max(nextBottom, this.minHeight), window.innerHeight * 0.8);
+
+    // Apply clamped movement
+    this.pokemon.positionLeft(clampedLeft);
+    this.pokemon.positionBottom(clampedBottom);
+
+    // Random chance to change direction
+    if (this.frameCount > 40 && Math.random() < 0.012) {
+      return FrameResult.stateComplete;
+    }
+
+    // Complete state if we hit boundaries
+    if (clampedLeft !== nextLeft || clampedBottom !== nextBottom) {
+      return FrameResult.stateComplete;
+    }
+
+    return FrameResult.stateContinue;
+  }
+}
+
+export class FlyDownLeftState implements IState {
+  label = States.flyDownLeft;
+  spriteLabel: string;
+  horizontalDirection = HorizontalDirection.left;
+  pokemon: IPokemonType;
+  private frameCount = 0;
+  private minHeight: number;
+  private amplitude = 8;
+  private frequency = 0.05;
+
+  constructor(pokemon: IPokemonType) {
+    this.pokemon = pokemon;
+    this.spriteLabel = pokemon.flyingSpriteLabel;
+    this.minHeight = pokemon.floor + 50;
+  }
+
+  nextFrame(): FrameResult {
+    this.frameCount++;
+
+    // Calculate next position but don't move yet
+    const wobble = Math.sin(this.frameCount * this.frequency) * this.amplitude;
+    const nextLeft = this.pokemon.left - this.pokemon.speed * 0.8 + wobble * 0.1;
+    const nextBottom = this.pokemon.bottom - this.pokemon.speed * 0.4;
+
+    // Check boundaries before moving
+    const maxLeft = window.innerWidth - this.pokemon.width - 10;
+    const clampedLeft = Math.min(Math.max(nextLeft, 10), maxLeft);
+    const clampedBottom = Math.min(Math.max(nextBottom, this.minHeight), window.innerHeight * 0.8);
+
+    // Apply clamped movement
+    this.pokemon.positionLeft(clampedLeft);
+    this.pokemon.positionBottom(clampedBottom);
+
+    // Random chance to change direction
+    if (this.frameCount > 40 && Math.random() < 0.012) {
+      return FrameResult.stateComplete;
+    }
+
+    // Complete state if we hit boundaries
+    if (clampedLeft !== nextLeft || clampedBottom !== nextBottom) {
       return FrameResult.stateComplete;
     }
 

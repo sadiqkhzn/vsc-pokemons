@@ -102,6 +102,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Butterfree!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    hasFlySprite: true,
   },
   weedle: {
     id: 13,
@@ -131,6 +132,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Pidgey!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    hasFlySprite: true,
   },
   pidgeotto: {
     id: 17,
@@ -139,6 +141,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Pidgeotto!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    hasFlySprite: true,
   },
   pidgeot: {
     id: 18,
@@ -147,6 +150,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Pidgeot!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    hasFlySprite: true,
   },
   rattata: {
     id: 19,
@@ -376,6 +380,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Venomoth!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    hasFlySprite: true,
   },
   diglett: {
     id: 50,
@@ -1452,6 +1457,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Murkrow!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    hasFlySprite: true,
   },
   slowking: {
     id: 199,
@@ -2158,6 +2164,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Beautifly!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    hasFlySprite: true,
   },
   cascoon: {
     id: 268,
@@ -2173,6 +2180,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Dustox!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    hasFlySprite: true,
   },
   lotad: {
     id: 270,
@@ -2223,6 +2231,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Taillow!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    hasFlySprite: true,
   },
   swellow: {
     id: 277,
@@ -2231,6 +2240,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Swellow!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    hasFlySprite: true,
   },
   wingull: {
     id: 278,
@@ -2610,6 +2620,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Flygon!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    hasFlySprite: true,
   },
   cacnea: {
     id: 331,

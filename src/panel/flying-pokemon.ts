@@ -42,15 +42,75 @@ export class FlyingPokemon extends BasePokemonType {
     sequenceStates: [
       {
         state: States.hover,
-        possibleNextStates: [States.flyLeft, States.flyRight, States.glideDown],
+        possibleNextStates: [
+          States.flyLeft, 
+          States.flyRight, 
+          States.flyUpLeft, 
+          States.flyUpRight,
+          States.flyDownLeft,
+          States.flyDownRight,
+          States.glideDown
+        ],
       },
       {
         state: States.flyRight,
-        possibleNextStates: [States.hover, States.flyLeft, States.glideDown],
+        possibleNextStates: [
+          States.hover, 
+          States.flyLeft, 
+          States.flyUpRight,
+          States.flyDownRight,
+          States.glideDown
+        ],
       },
       {
         state: States.flyLeft,
-        possibleNextStates: [States.hover, States.flyRight, States.glideDown],
+        possibleNextStates: [
+          States.hover, 
+          States.flyRight, 
+          States.flyUpLeft,
+          States.flyDownLeft,
+          States.glideDown
+        ],
+      },
+      {
+        state: States.flyUpRight,
+        possibleNextStates: [
+          States.hover,
+          States.flyRight,
+          States.flyUpLeft,
+          States.flyDownRight,
+          States.glideDown
+        ],
+      },
+      {
+        state: States.flyUpLeft,
+        possibleNextStates: [
+          States.hover,
+          States.flyLeft,
+          States.flyUpRight,
+          States.flyDownLeft,
+          States.glideDown
+        ],
+      },
+      {
+        state: States.flyDownRight,
+        possibleNextStates: [
+          States.hover,
+          States.flyRight,
+          States.flyUpRight,
+          States.flyDownLeft,
+          States.glideDown
+        ],
+      },
+      {
+        state: States.flyDownLeft,
+        possibleNextStates: [
+          States.hover,
+          States.flyLeft,
+          States.flyUpLeft,
+          States.flyDownRight,
+          States.glideDown
+        ],
       },
       {
         state: States.glideDown,
@@ -63,6 +123,7 @@ export class FlyingPokemon extends BasePokemonType {
           States.walkRight,
           States.flyRight,
           States.flyLeft,
+          States.hover,
         ],
       },
       {
@@ -72,6 +133,7 @@ export class FlyingPokemon extends BasePokemonType {
           States.walkLeft,
           States.flyLeft,
           States.flyRight,
+          States.hover,
         ],
       },
       {
@@ -81,6 +143,7 @@ export class FlyingPokemon extends BasePokemonType {
           States.flyRight,
           States.walkLeft,
           States.walkRight,
+          States.hover,
         ],
       },
       {
@@ -89,7 +152,13 @@ export class FlyingPokemon extends BasePokemonType {
       },
       {
         state: States.idleWithBall,
-        possibleNextStates: [States.hover, States.flyLeft, States.flyRight],
+        possibleNextStates: [
+          States.hover, 
+          States.flyLeft, 
+          States.flyRight,
+          States.flyUpLeft,
+          States.flyUpRight,
+        ],
       },
     ],
   };
@@ -105,6 +174,6 @@ export class FlyingPokemon extends BasePokemonType {
   }
 
   get flyingSpriteLabel(): string {
-    return POKEMON_DATA[this.label]?.hasFlySprite ? 'fly' : 'walk';
+    return 'walk';
   }
 }
