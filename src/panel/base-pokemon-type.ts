@@ -292,7 +292,31 @@ export abstract class BasePokemonType implements IPokemonType {
     if (this.el.src.endsWith(`_${validFace}_8fps.gif`)) {
       return;
     }
-    this.el.src = `${this.pokemonRoot}_${validFace}_8fps.gif`;
+
+    const spriteUrl = `${this.pokemonRoot}_${validFace}_8fps.gif`;
+    console.log(`[SPRITE DEBUG] Pokemon: ${this.label}, Face: ${validFace}, URL: ${spriteUrl}`);
+    
+    // Clear any previous error handler
+    this.el.onerror = null;
+    
+    // For shiny flying Pokemon, check if the sprite exists before setting
+    if (validFace === 'fly' && this.pokemonRoot.includes('/shiny')) {
+      // Try to load shiny fly sprite first, fall back to default if it fails
+      const img = new Image();
+      img.onload = () => {
+        console.log(`Shiny fly sprite loaded successfully: ${spriteUrl}`);
+        this.el.src = spriteUrl;
+      };
+      img.onerror = () => {
+        // Fall back to default fly sprite if shiny fly sprite doesn't exist
+        const defaultFlyUrl = this.pokemonRoot.replace('/shiny', '/default') + `_fly_8fps.gif`;
+        console.log(`Shiny fly sprite not found, falling back to: ${defaultFlyUrl}`);
+        this.el.src = defaultFlyUrl;
+      };
+      img.src = spriteUrl;
+    } else {
+      this.el.src = spriteUrl;
+    }
   }
 
   chooseNextState(fromState: States): States {
