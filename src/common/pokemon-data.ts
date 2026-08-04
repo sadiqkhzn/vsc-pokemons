@@ -4083,6 +4083,70 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     originalSpriteSize: 64,
   },
+  // Generation 5 (Unova starters)
+  snivy: {
+    id: 495,
+    name: 'Snivy',
+    generation: PokemonGeneration.Gen5,
+    cry: 'Snivy!',
+    possibleColors: [PokemonColor.default, PokemonColor.shiny],
+  },
+  servine: {
+    id: 496,
+    name: 'Servine',
+    generation: PokemonGeneration.Gen5,
+    cry: 'Servine!',
+    possibleColors: [PokemonColor.default, PokemonColor.shiny],
+  },
+  serperior: {
+    id: 497,
+    name: 'Serperior',
+    generation: PokemonGeneration.Gen5,
+    cry: 'Serperior!',
+    possibleColors: [PokemonColor.default, PokemonColor.shiny],
+  },
+  tepig: {
+    id: 498,
+    name: 'Tepig',
+    generation: PokemonGeneration.Gen5,
+    cry: 'Tepig!',
+    possibleColors: [PokemonColor.default, PokemonColor.shiny],
+  },
+  pignite: {
+    id: 499,
+    name: 'Pignite',
+    generation: PokemonGeneration.Gen5,
+    cry: 'Pignite!',
+    possibleColors: [PokemonColor.default, PokemonColor.shiny],
+  },
+  emboar: {
+    id: 500,
+    name: 'Emboar',
+    generation: PokemonGeneration.Gen5,
+    cry: 'Emboar!',
+    possibleColors: [PokemonColor.default, PokemonColor.shiny],
+  },
+  oshawott: {
+    id: 501,
+    name: 'Oshawott',
+    generation: PokemonGeneration.Gen5,
+    cry: 'Oshawott!',
+    possibleColors: [PokemonColor.default, PokemonColor.shiny],
+  },
+  dewott: {
+    id: 502,
+    name: 'Dewott',
+    generation: PokemonGeneration.Gen5,
+    cry: 'Dewott!',
+    possibleColors: [PokemonColor.default, PokemonColor.shiny],
+  },
+  samurott: {
+    id: 503,
+    name: 'Samurott',
+    generation: PokemonGeneration.Gen5,
+    cry: 'Samurott!',
+    possibleColors: [PokemonColor.default, PokemonColor.shiny],
+  },
 };
 
 export function getAllPokemon(): PokemonType[] {
