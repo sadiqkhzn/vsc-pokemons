@@ -12,6 +12,7 @@ export enum PokemonGeneration {
   Gen2 = 2,
   Gen3 = 3,
   Gen4 = 4,
+  Gen5 = 5,
 }
 
 export type PokemonTypeString = string & keyof typeof POKEMON_DATA;
