@@ -4538,6 +4538,22 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
   keldeo: { id: 647, name: 'Keldeo', generation: PokemonGeneration.Gen5, cry: 'Keldeo!', possibleColors: [PokemonColor.default, PokemonColor.shiny] },
   meloetta: { id: 648, name: 'Meloetta', generation: PokemonGeneration.Gen5, cry: 'Meloetta!', possibleColors: [PokemonColor.default, PokemonColor.shiny] },
   genesect: { id: 649, name: 'Genesect', generation: PokemonGeneration.Gen5, cry: 'Genesect!', possibleColors: [PokemonColor.default, PokemonColor.shiny], isFlying: true },
+  // Generation 6 — Mega Evolutions (Kanto)
+  venusaur_mega: { id: 10033, name: 'Mega Venusaur', generation: PokemonGeneration.Gen6, cry: 'Venusaur!', possibleColors: [PokemonColor.default, PokemonColor.shiny] },
+  charizard_mega_x: { id: 10034, name: 'Mega Charizard X', generation: PokemonGeneration.Gen6, cry: 'Charizard!', possibleColors: [PokemonColor.default, PokemonColor.shiny], isFlying: true },
+  charizard_mega_y: { id: 10035, name: 'Mega Charizard Y', generation: PokemonGeneration.Gen6, cry: 'Charizard!', possibleColors: [PokemonColor.default, PokemonColor.shiny], isFlying: true },
+  blastoise_mega: { id: 10036, name: 'Mega Blastoise', generation: PokemonGeneration.Gen6, cry: 'Blastoise!', possibleColors: [PokemonColor.default, PokemonColor.shiny] },
+  beedrill_mega: { id: 10090, name: 'Mega Beedrill', generation: PokemonGeneration.Gen6, cry: 'Beedrill!', possibleColors: [PokemonColor.default, PokemonColor.shiny], isFlying: true },
+  pidgeot_mega: { id: 10073, name: 'Mega Pidgeot', generation: PokemonGeneration.Gen6, cry: 'Pidgeot!', possibleColors: [PokemonColor.default, PokemonColor.shiny], isFlying: true },
+  alakazam_mega: { id: 10037, name: 'Mega Alakazam', generation: PokemonGeneration.Gen6, cry: 'Alakazam!', possibleColors: [PokemonColor.default, PokemonColor.shiny] },
+  slowbro_mega: { id: 10071, name: 'Mega Slowbro', generation: PokemonGeneration.Gen6, cry: 'Slowbro!', possibleColors: [PokemonColor.default, PokemonColor.shiny] },
+  gengar_mega: { id: 10038, name: 'Mega Gengar', generation: PokemonGeneration.Gen6, cry: 'Gengar!', possibleColors: [PokemonColor.default, PokemonColor.shiny] },
+  kangaskhan_mega: { id: 10039, name: 'Mega Kangaskhan', generation: PokemonGeneration.Gen6, cry: 'Kangaskhan!', possibleColors: [PokemonColor.default, PokemonColor.shiny] },
+  pinsir_mega: { id: 10040, name: 'Mega Pinsir', generation: PokemonGeneration.Gen6, cry: 'Pinsir!', possibleColors: [PokemonColor.default, PokemonColor.shiny], isFlying: true },
+  gyarados_mega: { id: 10041, name: 'Mega Gyarados', generation: PokemonGeneration.Gen6, cry: 'Gyarados!', possibleColors: [PokemonColor.default, PokemonColor.shiny] },
+  aerodactyl_mega: { id: 10042, name: 'Mega Aerodactyl', generation: PokemonGeneration.Gen6, cry: 'Aerodactyl!', possibleColors: [PokemonColor.default, PokemonColor.shiny], isFlying: true },
+  mewtwo_mega_x: { id: 10043, name: 'Mega Mewtwo X', generation: PokemonGeneration.Gen6, cry: 'Mewtwo!', possibleColors: [PokemonColor.default, PokemonColor.shiny] },
+  mewtwo_mega_y: { id: 10044, name: 'Mega Mewtwo Y', generation: PokemonGeneration.Gen6, cry: 'Mewtwo!', possibleColors: [PokemonColor.default, PokemonColor.shiny] },
 };
 
 export function getAllPokemon(): PokemonType[] {
