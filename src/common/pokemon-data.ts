@@ -4582,6 +4582,17 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
   latias_mega: { id: 10062, name: 'Mega Latias', generation: PokemonGeneration.Gen6, cry: 'Latias!', possibleColors: [PokemonColor.default, PokemonColor.shiny], isFlying: true },
   latios_mega: { id: 10063, name: 'Mega Latios', generation: PokemonGeneration.Gen6, cry: 'Latios!', possibleColors: [PokemonColor.default, PokemonColor.shiny], isFlying: true },
   rayquaza_mega: { id: 10079, name: 'Mega Rayquaza', generation: PokemonGeneration.Gen6, cry: 'Rayquaza!', possibleColors: [PokemonColor.default, PokemonColor.shiny], isFlying: true },
+  // Gen 6 Megas — Sinnoh + Kalos
+  lopunny_mega: { id: 10088, name: 'Mega Lopunny', generation: PokemonGeneration.Gen6, cry: 'Lopunny!', possibleColors: [PokemonColor.default, PokemonColor.shiny] },
+  garchomp_mega: { id: 10058, name: 'Mega Garchomp', generation: PokemonGeneration.Gen6, cry: 'Garchomp!', possibleColors: [PokemonColor.default, PokemonColor.shiny] },
+  lucario_mega: { id: 10059, name: 'Mega Lucario', generation: PokemonGeneration.Gen6, cry: 'Lucario!', possibleColors: [PokemonColor.default, PokemonColor.shiny] },
+  abomasnow_mega: { id: 10060, name: 'Mega Abomasnow', generation: PokemonGeneration.Gen6, cry: 'Abomasnow!', possibleColors: [PokemonColor.default, PokemonColor.shiny] },
+  gallade_mega: { id: 10068, name: 'Mega Gallade', generation: PokemonGeneration.Gen6, cry: 'Gallade!', possibleColors: [PokemonColor.default, PokemonColor.shiny] },
+  audino_mega: { id: 10069, name: 'Mega Audino', generation: PokemonGeneration.Gen6, cry: 'Audino!', possibleColors: [PokemonColor.default, PokemonColor.shiny] },
+  diancie_mega: { id: 10075, name: 'Mega Diancie', generation: PokemonGeneration.Gen6, cry: 'Diancie!', possibleColors: [PokemonColor.default, PokemonColor.shiny] },
+  // Primal Reversions
+  kyogre_primal: { id: 10077, name: 'Primal Kyogre', generation: PokemonGeneration.Gen6, cry: 'Kyogre!', possibleColors: [PokemonColor.default, PokemonColor.shiny] },
+  groudon_primal: { id: 10078, name: 'Primal Groudon', generation: PokemonGeneration.Gen6, cry: 'Groudon!', possibleColors: [PokemonColor.default, PokemonColor.shiny] },
 };
 
 export function getAllPokemon(): PokemonType[] {
