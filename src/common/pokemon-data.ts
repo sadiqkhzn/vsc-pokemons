@@ -4617,6 +4617,17 @@ export function getRandomPokemonConfig(): [PokemonType, PokemonConfig] {
   return [randomKey as PokemonType, POKEMON_DATA[randomKey]];
 }
 
+export function getRandomMegaConfig(): [PokemonType, PokemonConfig] {
+  const megaKeys = Object.entries(POKEMON_DATA)
+    .filter(([, config]) => config.generation === PokemonGeneration.Gen6)
+    .map(([key]) => key);
+  if (megaKeys.length === 0) {
+    return getRandomPokemonConfig();
+  }
+  const randomKey = megaKeys[Math.floor(Math.random() * megaKeys.length)];
+  return [randomKey as PokemonType, POKEMON_DATA[randomKey]];
+}
+
 export function getFlyingPokemon(): PokemonType[] {
   return Object.entries(POKEMON_DATA)
     .filter(([, config]) => config.isFlying === true)

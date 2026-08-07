@@ -40,6 +40,7 @@
         "onCommand:vscode-pokemon.start",
         "onCommand:vscode-pokemon.spawn-pokemon",
         "onCommand:vscode-pokemon.spawn-random-pokemon",
+        "onCommand:vscode-pokemon.spawn-random-mega",
         "onCommand:vscode-pokemon.spawn-flying-pokemon",
         "onCommand:vscode-pokemon.delete-pokemon",
         "onCommand:vscode-pokemon.remove-all-pokemon",
@@ -114,6 +115,15 @@
             {
                 "command": "vscode-pokemon.spawn-random-pokemon",
                 "title": "Surprise Me with a Random Pokémon",
+                "category": "Pokémon Companions",
+                "icon": {
+                    "dark": "media/icon/dark-random.svg",
+                    "light": "media/icon/light-random.svg"
+                }
+            },
+            {
+                "command": "vscode-pokemon.spawn-random-mega",
+                "title": "Spawn a Random Mega Evolution",
                 "category": "Pokémon Companions",
                 "icon": {
                     "dark": "media/icon/dark-random.svg",
