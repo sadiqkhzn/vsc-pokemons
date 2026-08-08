@@ -146,7 +146,7 @@ The `flyingSpriteLabel` property on `IPokemonType` determines what GIF is used d
 interface PokemonConfig {
   id: number;              // National Pokédex number
   name: string;            // Display name
-  generation: PokemonGeneration;  // Gen1-Gen4
+  generation: PokemonGeneration;  // Gen1-Gen6
   cry: string;             // Speech bubble text
   possibleColors: PokemonColor[]; // [default] or [default, shiny]
   originalSpriteSize?: number;    // 32 (default) or 64 (for large Pokémon)
