@@ -6,7 +6,7 @@ Bring beloved Pokémon companions to life in your VS Code editor with stunning p
 
 ## Features
 
-**565+ Animated Pokémon** from Generations 1-4
+**770+ Animated Pokémon** from Generations 1-6 (including 50 Mega Evolutions and Primal Reversions)
 - Beautifully crafted pixel art sprites with smooth 8fps animations
 - Each Pokémon has unique idle and walking behaviors
 
