@@ -73,7 +73,9 @@ The script `scripts/download-pmd-sprites.ps1` automates this entire process.
 
 ---
 
-## How to Add More Pokémon (Gen 5+)
+## How to Add More Pokémon (Gen 7+)
+
+Gen 5 (#494-#649) and Gen 6 Mega Evolutions/Primals are already included as of v1.1.1. This section covers extending to Gen 7 onward — note that animated pixel sprites for Gen 7+ do not exist officially (the games moved to 3D models), so sourcing options are limited.
 
 ### Step 1: Get Sprites
 
@@ -81,8 +83,6 @@ The script `scripts/download-pmd-sprites.ps1` automates this entire process.
 ```
 https://spriteserver.pmdcollab.org/assets/{dex_padded_4}/sprites.zip
 ```
-- Gen 5: #494-#649 → `0494` to `0649`
-- Gen 6: #650-#721
 - Gen 7: #722-#809
 - Gen 8: #810-#905
 - Gen 9: #906-#1025
