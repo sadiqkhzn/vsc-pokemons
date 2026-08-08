@@ -6,7 +6,7 @@ Everything about where sprites come from, how they work, and how to add more.
 
 ## Current Sprite Sources
 
-### 1. Walk & Idle Sprites (All Gen 1-4 Pokémon)
+### 1. Walk & Idle Sprites (All Gen 1-6 Pokémon, including Mega Evolutions)
 
 Every Pokémon has at minimum two animations:
 - `default_idle_8fps.gif` — standing still
