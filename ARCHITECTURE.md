@@ -49,6 +49,8 @@ pokemon-extension/
 │   ├── gen2/                 # Gen 2 sprite GIFs
 │   ├── gen3/                 # Gen 3 sprite GIFs
 │   ├── gen4/                 # Gen 4 sprite GIFs
+│   ├── gen5/                 # Gen 5 sprite GIFs (156 Unova Pokémon)
+│   ├── gen6/                 # Gen 6 sprite GIFs (50 Mega Evolutions + Primals)
 │   └── icon/                 # Toolbar icons (add, remove, random)
 │
 ├── scripts/
