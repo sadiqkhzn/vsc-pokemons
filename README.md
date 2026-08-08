@@ -52,9 +52,10 @@ Bring beloved Pokémon companions to life in your VS Code editor with stunning p
 Open the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`) and try:
 
 - **Launch Pokémon Workspace** - Start your magical coding session
-- **Add New Pokémon Companion** - Choose from 565+ Pokémon
+- **Add New Pokémon Companion** - Choose from 770+ Pokémon spanning Gen 1 through Gen 6
 - **Add Flying Pokémon Companion** - Specialized for aerial creatures
 - **Surprise Me with a Random Pokémon** - Let fate decide!
+- **Spawn a Random Mega Evolution** - Roll for one of the 50 Mega Evolutions or Primal Reversions
 - **Pokémon Roll Call** - See all your active companions
 - **Change Pokémon Language** - Switch between languages
 
