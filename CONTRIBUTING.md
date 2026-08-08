@@ -118,7 +118,7 @@ Pre-commit hooks via Husky run lint + format automatically.
 
 ## Known Limitations
 
-- Only Gen 1-4 Pokémon included (Gen 5+ sprites need to be added manually)
+- Gen 1-6 Pokémon included (156 Unova + 50 Mega Evolutions/Primals added as of v1.1.1). Gen 7+ sprites need to be added manually and no official animated pixel sprites exist for those generations.
 - Only 11 of 69 flying Pokémon have actual fly sprites (rest use walk animation while airborne)
 - Shiny sprites not available for all Gen 4 Pokémon
 - No fly sprites for shiny variants (only default color flies)
