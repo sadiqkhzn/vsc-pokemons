@@ -173,12 +173,17 @@ For this extension, we use: **Walk**, **Idle**, and **FlapAround**.
 
 ## Flying-Type Pokémon by Generation (for future reference)
 
-When adding Gen 5+, these are the flying-type Pokémon to tag with `isFlying: true`:
+### Gen 5 (#494-649) — done in v1.1.1
 
-### Gen 5 (#494-649)
-Unfezant (#521), Swoobat (#528), Sigilyph (#561), Archeops (#567), Swanna (#581), Emolga (#587), Braviary (#628), Mandibuzz (#630), Tornadus (#641)
+Already tagged with `isFlying: true` in `pokemon-data.ts`:
+Pidove line (#519-521), Woobat/Swoobat (#527-528), Sigilyph (#561), Archen/Archeops (#566-567), Ducklett/Swanna (#580-581), Emolga (#587), Rufflet/Braviary (#627-628), Vullaby/Mandibuzz (#629-630), Hydreigon (#635), Volcarona (#637), Tornadus/Thundurus/Landorus (#641-645), Reshiram/Zekrom (#643-644), Kyurem (#646), Genesect (#649)
 
-### Gen 6 (#650-721)
+### Gen 6 Mega Evolutions — done in v1.1.1
+
+Aerial megas tagged with `isFlying`: Charizard X/Y, Beedrill, Pidgeot, Pinsir, Aerodactyl, Scizor, Altaria, Salamence, Latias, Latios, Rayquaza.
+
+### Gen 6 species (#650-721) — future work
+
 Talonflame (#663), Vivillon (#666), Hawlucha (#701), Noivern (#715), Yveltal (#717)
 
 ### Gen 7 (#722-809)
