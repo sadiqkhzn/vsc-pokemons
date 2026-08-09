@@ -4617,6 +4617,11 @@ export function getRandomPokemonConfig(): [PokemonType, PokemonConfig] {
   return [randomKey as PokemonType, POKEMON_DATA[randomKey]];
 }
 
+/**
+ * Returns a random Mega Evolution or Primal Reversion (Gen 6 entries).
+ * Falls back to `getRandomPokemonConfig()` if no Gen 6 entries are registered,
+ * so callers never receive an undefined pair even in a broken data state.
+ */
 export function getRandomMegaConfig(): [PokemonType, PokemonConfig] {
   const megaKeys = Object.entries(POKEMON_DATA)
     .filter(([, config]) => config.generation === PokemonGeneration.Gen6)
@@ -4628,16 +4633,22 @@ export function getRandomMegaConfig(): [PokemonType, PokemonConfig] {
   return [randomKey as PokemonType, POKEMON_DATA[randomKey]];
 }
 
+/** Returns all Pokémon keys flagged with `isFlying: true`. */
 export function getFlyingPokemon(): PokemonType[] {
   return Object.entries(POKEMON_DATA)
     .filter(([, config]) => config.isFlying === true)
     .map(([key]) => key as PokemonType);
 }
 
+/** True if the Pokémon has aerial behavior enabled (roams in the sky). */
 export function isPokemonFlying(type: string): boolean {
   return POKEMON_DATA[type]?.isFlying === true;
 }
 
+/**
+ * True if the Pokémon has a dedicated `default_fly_8fps.gif` sprite.
+ * Distinct from `isFlying`: some flying Pokémon reuse walk animation in the air.
+ */
 export function hasPokemonFlySprite(type: string): boolean {
   return POKEMON_DATA[type]?.hasFlySprite === true;
 }
