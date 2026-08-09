@@ -148,6 +148,8 @@ Choose from official Pokémon languages:
 
 *Made with ❤️ for Pokémon fans and developers worldwide*
 
+See the [changelog](CHANGELOG.md) for version history and what changed in each release.
+
 ---
 
 ## Disclaimer
