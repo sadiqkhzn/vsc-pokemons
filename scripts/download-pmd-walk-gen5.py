@@ -134,9 +134,8 @@ def _find_anim(root: ET.Element, wanted: str) -> ET.Element | None:
     return None
 
 
-def _build_one(dex: int, name: str, anim_name: str, out_filename: str, *, dry_run: bool) -> str:
-    """Extract one animation ("Walk" or "Idle") and save as a GIF.
-    Returns "ok" / "no-anim-data" / "no-walk" / "no-png" / "error"."""
+def _fetch_frames(dex: int, anim_name: str) -> tuple[list[Image.Image], list[int]] | str:
+    """Return (frames, durations_ms) or an error status string."""
     dex_str = f"{dex:04d}"
     try:
         xml_bytes = fetch(f"{PMD_BASE}/{dex_str}/AnimData.xml")
@@ -173,17 +172,28 @@ def _build_one(dex: int, name: str, anim_name: str, out_filename: str, *, dry_ru
         crop = sheet.crop((i * fw, row_y, (i + 1) * fw, row_y + fh))
         frames.append(crop.convert("RGBA"))
 
-    if dry_run:
-        return "ok"
-
-    # PMD durations are game ticks (~30fps). Convert to ms, clamp so nothing
-    # lingers absurdly and nothing plays too fast to see.
     frame_ms: list[int] = []
     for i in range(n_frames):
         d = durations[i % len(durations)] if durations else 4
         frame_ms.append(max(60, min(int(d * 33), 220)))
+    return frames, frame_ms
 
-    out_path = MEDIA_DIR / name / out_filename
+
+def _pad_frame(img: Image.Image, target_w: int, target_h: int) -> Image.Image:
+    """Pad an RGBA frame to (target_w, target_h) with the sprite bottom-center anchored.
+    This is what keeps the character's feet at a consistent Y so the extension's
+    bottom-based positioning doesn't make the sprite appear to float or jump when
+    the animation switches between different-sized source frames."""
+    if img.size == (target_w, target_h):
+        return img
+    canvas = Image.new("RGBA", (target_w, target_h), (0, 0, 0, 0))
+    x = (target_w - img.width) // 2
+    y = target_h - img.height  # bottom-align
+    canvas.paste(img, (x, y), img)
+    return canvas
+
+
+def _save_gif(frames: list[Image.Image], frame_ms: list[int], out_path: Path) -> None:
     out_path.parent.mkdir(parents=True, exist_ok=True)
     frames[0].save(
         out_path,
@@ -194,15 +204,45 @@ def _build_one(dex: int, name: str, anim_name: str, out_filename: str, *, dry_ru
         disposal=2,
         transparency=0,
     )
-    return "ok"
 
 
-def build_walk_gif(dex: int, name: str, *, dry_run: bool) -> str:
-    return _build_one(dex, name, "Walk", "default_walk_8fps.gif", dry_run=dry_run)
+def build_pokemon(dex: int, name: str, *, dry_run: bool) -> tuple[str, str]:
+    """Build both idle and walk with matching dimensions (bottom-aligned).
+    Returns (walk_status, idle_status)."""
+    idle_result = _fetch_frames(dex, "Idle")
+    walk_result = _fetch_frames(dex, "Walk")
 
+    idle_ok = isinstance(idle_result, tuple)
+    walk_ok = isinstance(walk_result, tuple)
+    idle_status = "ok" if idle_ok else idle_result
+    walk_status = "ok" if walk_ok else walk_result
 
-def build_idle_gif(dex: int, name: str, *, dry_run: bool) -> str:
-    return _build_one(dex, name, "Idle", "default_idle_8fps.gif", dry_run=dry_run)
+    if not (idle_ok or walk_ok):
+        return walk_status, idle_status
+
+    # Determine common frame dimensions so idle and walk align at the feet.
+    all_frames: list[Image.Image] = []
+    if idle_ok:
+        all_frames.extend(idle_result[0])
+    if walk_ok:
+        all_frames.extend(walk_result[0])
+    target_w = max(f.width for f in all_frames)
+    target_h = max(f.height for f in all_frames)
+
+    if dry_run:
+        return walk_status, idle_status
+
+    if idle_ok:
+        idle_frames, idle_ms = idle_result
+        idle_padded = [_pad_frame(f, target_w, target_h) for f in idle_frames]
+        _save_gif(idle_padded, idle_ms, MEDIA_DIR / name / "default_idle_8fps.gif")
+
+    if walk_ok:
+        walk_frames, walk_ms = walk_result
+        walk_padded = [_pad_frame(f, target_w, target_h) for f in walk_frames]
+        _save_gif(walk_padded, walk_ms, MEDIA_DIR / name / "default_walk_8fps.gif")
+
+    return walk_status, idle_status
 
 
 def main() -> int:
@@ -219,24 +259,24 @@ def main() -> int:
     walk_counts = {"ok": 0, "no-anim-data": 0, "no-walk": 0, "no-png": 0, "error": 0}
     idle_counts = {"ok": 0, "no-anim-data": 0, "no-walk": 0, "no-png": 0, "error": 0}
     for dex, name in sorted(targets.items()):
-        for label, builder, counts in (
-            ("walk", build_walk_gif, walk_counts),
-            ("idle", build_idle_gif, idle_counts),
-        ):
-            try:
-                status = builder(dex, name, dry_run=args.dry_run)
-            except Exception as e:  # pragma: no cover
-                status = "error"
-                print(f"  FAIL {name:16s} #{dex} {label}  {e}", file=sys.stderr)
-            counts[status] += 1
-            marker = {
-                "ok": "OK  ",
-                "no-anim-data": "MISS",
-                "no-walk": "SKIP",
-                "no-png": "SKIP",
-                "error": "FAIL",
-            }[status]
-            print(f"  {marker} {name:16s} #{dex}  {label}  ({status})")
+        try:
+            walk_status, idle_status = build_pokemon(dex, name, dry_run=args.dry_run)
+        except Exception as e:  # pragma: no cover
+            walk_status = idle_status = "error"
+            print(f"  FAIL {name:16s} #{dex}  {e}", file=sys.stderr)
+        walk_counts[walk_status] += 1
+        idle_counts[idle_status] += 1
+        marker_map = {
+            "ok": "OK  ",
+            "no-anim-data": "MISS",
+            "no-walk": "SKIP",
+            "no-png": "SKIP",
+            "error": "FAIL",
+        }
+        print(
+            f"  walk={marker_map[walk_status]} idle={marker_map[idle_status]} "
+            f"{name:16s} #{dex}"
+        )
 
     print()
     print(f"walk: {walk_counts}")
