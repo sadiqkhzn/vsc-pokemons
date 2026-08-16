@@ -33,8 +33,26 @@ from PIL import Image
 # ----------------------------------------------------------------------
 WALK_ROW = 2
 
-MEDIA_DIR = Path(__file__).resolve().parent.parent / "media" / "gen5"
+MEDIA_ROOT = Path(__file__).resolve().parent.parent / "media"
+MEDIA_DIR = MEDIA_ROOT / "gen5"  # kept for backward compatibility
 PMD_BASE = "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/master/sprite"
+
+# Dex ranges per generation → media folder
+DEX_TO_GEN = [
+    (range(1, 152), "gen1"),
+    (range(152, 252), "gen2"),
+    (range(252, 387), "gen3"),
+    (range(387, 494), "gen4"),
+    (range(494, 650), "gen5"),
+    (range(650, 722), "gen6"),
+]
+
+
+def _gen_dir_for(dex: int) -> Path:
+    for r, g in DEX_TO_GEN:
+        if dex in r:
+            return MEDIA_ROOT / g
+    return MEDIA_DIR
 
 # Gen 5 dex ID -> folder name (must match keys registered in
 # src/common/pokemon-data.ts). If a Pokémon has no PMD entry (rare
@@ -109,6 +127,44 @@ GEN5: dict[int, str] = {
     645: "landorus", 646: "kyurem",
     647: "keldeo", 648: "meloetta", 649: "genesect",
 }
+
+GEN6: dict[int, str] = {
+    650: "chespin", 651: "quilladin", 652: "chesnaught",
+    653: "fennekin", 654: "braixen", 655: "delphox",
+    656: "froakie", 657: "frogadier", 658: "greninja",
+    659: "bunnelby", 660: "diggersby",
+    661: "fletchling", 662: "fletchinder", 663: "talonflame",
+    664: "scatterbug", 665: "spewpa", 666: "vivillon",
+    667: "litleo", 668: "pyroar",
+    669: "flabebe", 670: "floette", 671: "florges",
+    672: "skiddo", 673: "gogoat",
+    674: "pancham", 675: "pangoro",
+    676: "furfrou",
+    677: "espurr", 678: "meowstic",
+    679: "honedge", 680: "doublade", 681: "aegislash",
+    682: "spritzee", 683: "aromatisse",
+    684: "swirlix", 685: "slurpuff",
+    686: "inkay", 687: "malamar",
+    688: "binacle", 689: "barbaracle",
+    690: "skrelp", 691: "dragalge",
+    692: "clauncher", 693: "clawitzer",
+    694: "helioptile", 695: "heliolisk",
+    696: "tyrunt", 697: "tyrantrum",
+    698: "amaura", 699: "aurorus",
+    700: "sylveon",
+    701: "hawlucha",
+    702: "dedenne", 703: "carbink",
+    704: "goomy", 705: "sliggoo", 706: "goodra",
+    707: "klefki",
+    708: "phantump", 709: "trevenant",
+    710: "pumpkaboo", 711: "gourgeist",
+    712: "bergmite", 713: "avalugg",
+    714: "noibat", 715: "noivern",
+    716: "xerneas", 717: "yveltal", 718: "zygarde",
+    719: "diancie", 720: "hoopa", 721: "volcanion",
+}
+
+ALL: dict[int, str] = {**GEN5, **GEN6}
 
 
 def fetch(url: str, retries: int = 3) -> bytes:
@@ -282,20 +338,31 @@ def build_pokemon(dex: int, name: str, *, dry_run: bool) -> tuple[str, str, int]
     if dry_run:
         return walk_status, idle_status, target
 
+    out_dir = _gen_dir_for(dex) / name
     if idle_ok:
         idle_frames, idle_ms = idle_result
         _save_gif(
             _per_frame_align(idle_frames, target, target),
             idle_ms,
-            MEDIA_DIR / name / "default_idle_8fps.gif",
+            out_dir / "default_idle_8fps.gif",
         )
     if walk_ok:
         walk_frames, walk_ms = walk_result
         _save_gif(
             _per_frame_align(walk_frames, target, target),
             walk_ms,
-            MEDIA_DIR / name / "default_walk_8fps.gif",
+            out_dir / "default_walk_8fps.gif",
         )
+
+    # Ensure shiny_*.gif exist so the extension doesn't 404 on shiny spawns.
+    # PMD doesn't provide shiny palettes, so we fall back to the default GIFs.
+    # (Gen 1-5 already have Showdown-style shinies from the original setup;
+    # for Gen 6 species this is a fresh copy so shiny spawns render *something*.)
+    for kind in ("idle", "walk"):
+        default_path = out_dir / f"default_{kind}_8fps.gif"
+        shiny_path = out_dir / f"shiny_{kind}_8fps.gif"
+        if default_path.exists() and not shiny_path.exists():
+            shiny_path.write_bytes(default_path.read_bytes())
 
     return walk_status, idle_status, target
 
@@ -306,10 +373,10 @@ def main() -> int:
     parser.add_argument("--only", type=str, default=None, help="comma-separated dex ids to run (e.g. 495,527,635)")
     args = parser.parse_args()
 
-    targets = GEN5
+    targets = ALL
     if args.only:
         wanted = {int(x) for x in args.only.split(",")}
-        targets = {k: v for k, v in GEN5.items() if k in wanted}
+        targets = {k: v for k, v in ALL.items() if k in wanted}
 
     walk_counts = {"ok": 0, "no-anim-data": 0, "no-walk": 0, "no-png": 0, "error": 0}
     idle_counts = {"ok": 0, "no-anim-data": 0, "no-walk": 0, "no-png": 0, "error": 0}
