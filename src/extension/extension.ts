@@ -6,7 +6,6 @@ import {
   getDefaultPokemon as getDefaultPokemonType,
   getPokemonByGeneration,
   getRandomPokemonConfig,
-  getRandomMegaConfig,
   getFlyingPokemon,
   POKEMON_DATA,
 } from '../common/pokemon-data';
@@ -1010,45 +1009,6 @@ export function activate(context: vscode.ExtensionContext) {
 
           panel.spawnPokemon(spec);
           var collection = PokemonSpecification.collectionFromMemento(
-            context,
-            getConfiguredSize(),
-          );
-          collection.push(spec);
-          await storeCollectionAsMemento(context, collection);
-        } else {
-          await createPokemonPlayground(context);
-          await vscode.window.showInformationMessage(
-            vscode.l10n.t(
-              "A Pokemon Playground has been created. You can now use the 'Remove All Pokemon' Command to remove all Pokemon.",
-            ),
-          );
-        }
-      },
-    ),
-  );
-
-  // Spawn random Mega Evolution or Primal Reversion (Gen 6)
-  context.subscriptions.push(
-    vscode.commands.registerCommand(
-      'vscode-pokemon.spawn-random-mega',
-      async () => {
-        const panel = getPokemonPanel();
-        if (
-          getConfigurationPosition() === ExtPosition.explorer &&
-          webviewViewProvider
-        ) {
-          await vscode.commands.executeCommand('pokemonView.focus');
-        }
-        if (panel) {
-          const [megaType, megaConfig] = getRandomMegaConfig();
-          const spec = new PokemonSpecification(
-            maybeMakeShiny(megaConfig.possibleColors),
-            megaType,
-            getConfiguredSize(),
-            megaConfig.name,
-          );
-          panel.spawnPokemon(spec);
-          const collection = PokemonSpecification.collectionFromMemento(
             context,
             getConfiguredSize(),
           );
