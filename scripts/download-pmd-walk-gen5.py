@@ -207,19 +207,26 @@ def _save_gif(frames: list[Image.Image], frame_ms: list[int], out_path: Path) ->
 
 
 def _per_frame_align(frames: list[Image.Image], target_w: int, target_h: int) -> list[Image.Image]:
-    """For each frame, tight-crop to its own non-transparent content and paste
+    """For each frame, tight-crop to its own non-transparent content, then paste
     into a (target_w, target_h) canvas horizontally centered and bottom-aligned.
-    This matches Gen 1-4 convention where the character's lowest visible pixel
-    sits at the frame bottom (so bottom-anchored CSS positioning puts feet at
-    the floor line, not hovering above it)."""
+    Character's lowest visible pixel lands at the frame bottom so a
+    bottom-anchored CSS position puts the feet on the floor line, and the
+    surrounding transparent padding keeps proportions natural when the browser
+    stretches the sprite to a fixed square (matching Gen 1-4 convention)."""
     out = []
     for f in frames:
         bbox = f.getbbox()
         if bbox is None:
-            # empty frame — just make a transparent canvas
             out.append(Image.new("RGBA", (target_w, target_h), (0, 0, 0, 0)))
             continue
         content = f.crop(bbox)
+        # If content exceeds target, scale down proportionally (rare — only for
+        # very large mons whose PMD sprite happens to be bigger than target).
+        if content.width > target_w or content.height > target_h:
+            scale = min(target_w / content.width, target_h / content.height)
+            new_w = max(1, int(content.width * scale))
+            new_h = max(1, int(content.height * scale))
+            content = content.resize((new_w, new_h), Image.NEAREST)
         canvas = Image.new("RGBA", (target_w, target_h), (0, 0, 0, 0))
         x = (target_w - content.width) // 2
         y = target_h - content.height  # bottom-align
@@ -228,13 +235,20 @@ def _per_frame_align(frames: list[Image.Image], target_w: int, target_h: int) ->
     return out
 
 
-def build_pokemon(dex: int, name: str, *, dry_run: bool) -> tuple[str, str]:
-    """Build both idle and walk. For each pokemon, compute a shared canvas size
-    from the max content width and height across all idle+walk frames, then
-    place every frame's content bottom-center anchored. This gives:
-      - identical dims across idle and walk (no floating jump between states)
-      - character's feet at frame bottom (matches Gen 1-4 convention)
-      - horizontal center consistent (no sliding-sideways)"""
+def _choose_target_size(max_w: int, max_h: int) -> int:
+    """Pick a square canvas size matching Gen 1-4 conventions.
+    Gen 1-4 uses 32x32 for most pokemon, 64x64 only for large ones (Dialga etc).
+    We mirror that so all Gen 5 sprites render at natural in-frame proportions
+    against the extension's fixed square CSS box."""
+    if max(max_w, max_h) <= 32:
+        return 32
+    return 64
+
+
+def build_pokemon(dex: int, name: str, *, dry_run: bool) -> tuple[str, str, int]:
+    """Build both idle and walk with the character bottom-center anchored inside
+    a Gen 1-4-style square canvas (32x32 or 64x64). Returns
+    (walk_status, idle_status, target_size)."""
     idle_result = _fetch_frames(dex, "Idle")
     walk_result = _fetch_frames(dex, "Walk")
 
@@ -244,7 +258,7 @@ def build_pokemon(dex: int, name: str, *, dry_run: bool) -> tuple[str, str]:
     walk_status = "ok" if walk_ok else walk_result
 
     if not (idle_ok or walk_ok):
-        return walk_status, idle_status
+        return walk_status, idle_status, 32
 
     all_frames: list[Image.Image] = []
     if idle_ok:
@@ -252,7 +266,6 @@ def build_pokemon(dex: int, name: str, *, dry_run: bool) -> tuple[str, str]:
     if walk_ok:
         all_frames.extend(walk_result[0])
 
-    # Compute max content dims across all per-frame bounding boxes.
     max_w = 0
     max_h = 0
     for f in all_frames:
@@ -262,27 +275,29 @@ def build_pokemon(dex: int, name: str, *, dry_run: bool) -> tuple[str, str]:
         max_w = max(max_w, bbox[2] - bbox[0])
         max_h = max(max_h, bbox[3] - bbox[1])
     if max_w == 0 or max_h == 0:
-        return walk_status, idle_status
+        return walk_status, idle_status, 32
+
+    target = _choose_target_size(max_w, max_h)
 
     if dry_run:
-        return walk_status, idle_status
+        return walk_status, idle_status, target
 
     if idle_ok:
         idle_frames, idle_ms = idle_result
         _save_gif(
-            _per_frame_align(idle_frames, max_w, max_h),
+            _per_frame_align(idle_frames, target, target),
             idle_ms,
             MEDIA_DIR / name / "default_idle_8fps.gif",
         )
     if walk_ok:
         walk_frames, walk_ms = walk_result
         _save_gif(
-            _per_frame_align(walk_frames, max_w, max_h),
+            _per_frame_align(walk_frames, target, target),
             walk_ms,
             MEDIA_DIR / name / "default_walk_8fps.gif",
         )
 
-    return walk_status, idle_status
+    return walk_status, idle_status, target
 
 
 def main() -> int:
@@ -298,14 +313,19 @@ def main() -> int:
 
     walk_counts = {"ok": 0, "no-anim-data": 0, "no-walk": 0, "no-png": 0, "error": 0}
     idle_counts = {"ok": 0, "no-anim-data": 0, "no-walk": 0, "no-png": 0, "error": 0}
+    large_pokemon: list[str] = []  # need originalSpriteSize: 64 in pokemon-data.ts
+
     for dex, name in sorted(targets.items()):
         try:
-            walk_status, idle_status = build_pokemon(dex, name, dry_run=args.dry_run)
+            walk_status, idle_status, target = build_pokemon(dex, name, dry_run=args.dry_run)
         except Exception as e:  # pragma: no cover
             walk_status = idle_status = "error"
+            target = 32
             print(f"  FAIL {name:16s} #{dex}  {e}", file=sys.stderr)
         walk_counts[walk_status] += 1
         idle_counts[idle_status] += 1
+        if target == 64 and (walk_status == "ok" or idle_status == "ok"):
+            large_pokemon.append(name)
         marker_map = {
             "ok": "OK  ",
             "no-anim-data": "MISS",
@@ -315,12 +335,16 @@ def main() -> int:
         }
         print(
             f"  walk={marker_map[walk_status]} idle={marker_map[idle_status]} "
-            f"{name:16s} #{dex}"
+            f"target={target:2d}  {name:16s} #{dex}"
         )
 
     print()
     print(f"walk: {walk_counts}")
     print(f"idle: {idle_counts}")
+    if large_pokemon:
+        print(f"\nlarge (target=64, need originalSpriteSize: 64 in pokemon-data.ts):")
+        for n in large_pokemon:
+            print(f"  {n}")
     return 0 if walk_counts["error"] == 0 and idle_counts["error"] == 0 else 1
 
 
