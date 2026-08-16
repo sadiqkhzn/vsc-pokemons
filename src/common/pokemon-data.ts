@@ -4633,61 +4633,9 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
   diancie: { id: 719, name: 'Diancie', generation: PokemonGeneration.Gen6, cry: 'Diancie!', possibleColors: [PokemonColor.default, PokemonColor.shiny] },
   hoopa: { id: 720, name: 'Hoopa', generation: PokemonGeneration.Gen6, cry: 'Hoopa!', possibleColors: [PokemonColor.default, PokemonColor.shiny], originalSpriteSize: 29 },
   volcanion: { id: 721, name: 'Volcanion', generation: PokemonGeneration.Gen6, cry: 'Volcanion!', possibleColors: [PokemonColor.default, PokemonColor.shiny], originalSpriteSize: 43 },
-  // Generation 6 — Mega Evolutions (Kanto)
-  venusaur_mega: { id: 10033, name: 'Mega Venusaur', generation: PokemonGeneration.Gen6, cry: 'Venusaur!', possibleColors: [PokemonColor.default, PokemonColor.shiny], originalSpriteSize: 48 },
-  charizard_mega_x: { id: 10034, name: 'Mega Charizard X', generation: PokemonGeneration.Gen6, cry: 'Charizard!', possibleColors: [PokemonColor.default, PokemonColor.shiny], isFlying: true, originalSpriteSize: 43 },
-  charizard_mega_y: { id: 10035, name: 'Mega Charizard Y', generation: PokemonGeneration.Gen6, cry: 'Charizard!', possibleColors: [PokemonColor.default, PokemonColor.shiny], isFlying: true, originalSpriteSize: 43 },
-  blastoise_mega: { id: 10036, name: 'Mega Blastoise', generation: PokemonGeneration.Gen6, cry: 'Blastoise!', possibleColors: [PokemonColor.default, PokemonColor.shiny], originalSpriteSize: 42 },
-  beedrill_mega: { id: 10090, name: 'Mega Beedrill', generation: PokemonGeneration.Gen6, cry: 'Beedrill!', possibleColors: [PokemonColor.default, PokemonColor.shiny], isFlying: true, originalSpriteSize: 40 },
-  pidgeot_mega: { id: 10073, name: 'Mega Pidgeot', generation: PokemonGeneration.Gen6, cry: 'Pidgeot!', possibleColors: [PokemonColor.default, PokemonColor.shiny], isFlying: true, originalSpriteSize: 47 },
-  alakazam_mega: { id: 10037, name: 'Mega Alakazam', generation: PokemonGeneration.Gen6, cry: 'Alakazam!', possibleColors: [PokemonColor.default, PokemonColor.shiny], originalSpriteSize: 38 },
-  slowbro_mega: { id: 10071, name: 'Mega Slowbro', generation: PokemonGeneration.Gen6, cry: 'Slowbro!', possibleColors: [PokemonColor.default, PokemonColor.shiny], originalSpriteSize: 45 },
-  gengar_mega: { id: 10038, name: 'Mega Gengar', generation: PokemonGeneration.Gen6, cry: 'Gengar!', possibleColors: [PokemonColor.default, PokemonColor.shiny], originalSpriteSize: 40 },
-  kangaskhan_mega: { id: 10039, name: 'Mega Kangaskhan', generation: PokemonGeneration.Gen6, cry: 'Kangaskhan!', possibleColors: [PokemonColor.default, PokemonColor.shiny], originalSpriteSize: 47 },
-  pinsir_mega: { id: 10040, name: 'Mega Pinsir', generation: PokemonGeneration.Gen6, cry: 'Pinsir!', possibleColors: [PokemonColor.default, PokemonColor.shiny], isFlying: true, originalSpriteSize: 43 },
-  gyarados_mega: { id: 10041, name: 'Mega Gyarados', generation: PokemonGeneration.Gen6, cry: 'Gyarados!', possibleColors: [PokemonColor.default, PokemonColor.shiny], originalSpriteSize: 67 },
-  aerodactyl_mega: { id: 10042, name: 'Mega Aerodactyl', generation: PokemonGeneration.Gen6, cry: 'Aerodactyl!', possibleColors: [PokemonColor.default, PokemonColor.shiny], isFlying: true, originalSpriteSize: 46 },
-  mewtwo_mega_x: { id: 10043, name: 'Mega Mewtwo X', generation: PokemonGeneration.Gen6, cry: 'Mewtwo!', possibleColors: [PokemonColor.default, PokemonColor.shiny], originalSpriteSize: 48 },
-  mewtwo_mega_y: { id: 10044, name: 'Mega Mewtwo Y', generation: PokemonGeneration.Gen6, cry: 'Mewtwo!', possibleColors: [PokemonColor.default, PokemonColor.shiny], originalSpriteSize: 41 },
   // Gen 6 Megas — Johto
-  ampharos_mega: { id: 10045, name: 'Mega Ampharos', generation: PokemonGeneration.Gen6, cry: 'Ampharos!', possibleColors: [PokemonColor.default, PokemonColor.shiny], originalSpriteSize: 40 },
-  steelix_mega: { id: 10072, name: 'Mega Steelix', generation: PokemonGeneration.Gen6, cry: 'Steelix!', possibleColors: [PokemonColor.default, PokemonColor.shiny], originalSpriteSize: 79 },
-  scizor_mega: { id: 10046, name: 'Mega Scizor', generation: PokemonGeneration.Gen6, cry: 'Scizor!', possibleColors: [PokemonColor.default, PokemonColor.shiny], isFlying: true, originalSpriteSize: 45 },
-  heracross_mega: { id: 10047, name: 'Mega Heracross', generation: PokemonGeneration.Gen6, cry: 'Heracross!', possibleColors: [PokemonColor.default, PokemonColor.shiny], originalSpriteSize: 43 },
-  houndoom_mega: { id: 10048, name: 'Mega Houndoom', generation: PokemonGeneration.Gen6, cry: 'Houndoom!', possibleColors: [PokemonColor.default, PokemonColor.shiny], originalSpriteSize: 45 },
-  tyranitar_mega: { id: 10049, name: 'Mega Tyranitar', generation: PokemonGeneration.Gen6, cry: 'Tyranitar!', possibleColors: [PokemonColor.default, PokemonColor.shiny], originalSpriteSize: 49 },
   // Gen 6 Megas — Hoenn
-  sceptile_mega: { id: 10065, name: 'Mega Sceptile', generation: PokemonGeneration.Gen6, cry: 'Sceptile!', possibleColors: [PokemonColor.default, PokemonColor.shiny], originalSpriteSize: 45 },
-  blaziken_mega: { id: 10050, name: 'Mega Blaziken', generation: PokemonGeneration.Gen6, cry: 'Blaziken!', possibleColors: [PokemonColor.default, PokemonColor.shiny], originalSpriteSize: 45 },
-  swampert_mega: { id: 10064, name: 'Mega Swampert', generation: PokemonGeneration.Gen6, cry: 'Swampert!', possibleColors: [PokemonColor.default, PokemonColor.shiny], originalSpriteSize: 45 },
-  gardevoir_mega: { id: 10051, name: 'Mega Gardevoir', generation: PokemonGeneration.Gen6, cry: 'Gardevoir!', possibleColors: [PokemonColor.default, PokemonColor.shiny], originalSpriteSize: 42 },
-  sableye_mega: { id: 10066, name: 'Mega Sableye', generation: PokemonGeneration.Gen6, cry: 'Sableye!', possibleColors: [PokemonColor.default, PokemonColor.shiny], originalSpriteSize: 29 },
-  mawile_mega: { id: 10052, name: 'Mega Mawile', generation: PokemonGeneration.Gen6, cry: 'Mawile!', possibleColors: [PokemonColor.default, PokemonColor.shiny], originalSpriteSize: 36 },
-  aggron_mega: { id: 10053, name: 'Mega Aggron', generation: PokemonGeneration.Gen6, cry: 'Aggron!', possibleColors: [PokemonColor.default, PokemonColor.shiny], originalSpriteSize: 47 },
-  medicham_mega: { id: 10054, name: 'Mega Medicham', generation: PokemonGeneration.Gen6, cry: 'Medicham!', possibleColors: [PokemonColor.default, PokemonColor.shiny], originalSpriteSize: 39 },
-  manectric_mega: { id: 10055, name: 'Mega Manectric', generation: PokemonGeneration.Gen6, cry: 'Manectric!', possibleColors: [PokemonColor.default, PokemonColor.shiny], originalSpriteSize: 44 },
-  sharpedo_mega: { id: 10070, name: 'Mega Sharpedo', generation: PokemonGeneration.Gen6, cry: 'Sharpedo!', possibleColors: [PokemonColor.default, PokemonColor.shiny], originalSpriteSize: 49 },
-  camerupt_mega: { id: 10087, name: 'Mega Camerupt', generation: PokemonGeneration.Gen6, cry: 'Camerupt!', possibleColors: [PokemonColor.default, PokemonColor.shiny], originalSpriteSize: 49 },
-  altaria_mega: { id: 10067, name: 'Mega Altaria', generation: PokemonGeneration.Gen6, cry: 'Altaria!', possibleColors: [PokemonColor.default, PokemonColor.shiny], isFlying: true, originalSpriteSize: 41 },
-  banette_mega: { id: 10056, name: 'Mega Banette', generation: PokemonGeneration.Gen6, cry: 'Banette!', possibleColors: [PokemonColor.default, PokemonColor.shiny], originalSpriteSize: 38 },
-  absol_mega: { id: 10057, name: 'Mega Absol', generation: PokemonGeneration.Gen6, cry: 'Absol!', possibleColors: [PokemonColor.default, PokemonColor.shiny], originalSpriteSize: 38 },
-  glalie_mega: { id: 10074, name: 'Mega Glalie', generation: PokemonGeneration.Gen6, cry: 'Glalie!', possibleColors: [PokemonColor.default, PokemonColor.shiny], originalSpriteSize: 46 },
-  salamence_mega: { id: 10089, name: 'Mega Salamence', generation: PokemonGeneration.Gen6, cry: 'Salamence!', possibleColors: [PokemonColor.default, PokemonColor.shiny], isFlying: true, originalSpriteSize: 44 },
-  metagross_mega: { id: 10076, name: 'Mega Metagross', generation: PokemonGeneration.Gen6, cry: 'Metagross!', possibleColors: [PokemonColor.default, PokemonColor.shiny], originalSpriteSize: 49 },
-  latias_mega: { id: 10062, name: 'Mega Latias', generation: PokemonGeneration.Gen6, cry: 'Latias!', possibleColors: [PokemonColor.default, PokemonColor.shiny], isFlying: true, originalSpriteSize: 44 },
-  latios_mega: { id: 10063, name: 'Mega Latios', generation: PokemonGeneration.Gen6, cry: 'Latios!', possibleColors: [PokemonColor.default, PokemonColor.shiny], isFlying: true, originalSpriteSize: 48 },
-  rayquaza_mega: { id: 10079, name: 'Mega Rayquaza', generation: PokemonGeneration.Gen6, cry: 'Rayquaza!', possibleColors: [PokemonColor.default, PokemonColor.shiny], isFlying: true, originalSpriteSize: 80 },
   // Gen 6 Megas — Sinnoh + Kalos
-  lopunny_mega: { id: 10088, name: 'Mega Lopunny', generation: PokemonGeneration.Gen6, cry: 'Lopunny!', possibleColors: [PokemonColor.default, PokemonColor.shiny], originalSpriteSize: 39 },
-  garchomp_mega: { id: 10058, name: 'Mega Garchomp', generation: PokemonGeneration.Gen6, cry: 'Garchomp!', possibleColors: [PokemonColor.default, PokemonColor.shiny], originalSpriteSize: 45 },
-  lucario_mega: { id: 10059, name: 'Mega Lucario', generation: PokemonGeneration.Gen6, cry: 'Lucario!', possibleColors: [PokemonColor.default, PokemonColor.shiny], originalSpriteSize: 39 },
-  abomasnow_mega: { id: 10060, name: 'Mega Abomasnow', generation: PokemonGeneration.Gen6, cry: 'Abomasnow!', possibleColors: [PokemonColor.default, PokemonColor.shiny], originalSpriteSize: 50 },
-  gallade_mega: { id: 10068, name: 'Mega Gallade', generation: PokemonGeneration.Gen6, cry: 'Gallade!', possibleColors: [PokemonColor.default, PokemonColor.shiny], originalSpriteSize: 42 },
-  audino_mega: { id: 10069, name: 'Mega Audino', generation: PokemonGeneration.Gen6, cry: 'Audino!', possibleColors: [PokemonColor.default, PokemonColor.shiny], originalSpriteSize: 41 },
-  diancie_mega: { id: 10075, name: 'Mega Diancie', generation: PokemonGeneration.Gen6, cry: 'Diancie!', possibleColors: [PokemonColor.default, PokemonColor.shiny], originalSpriteSize: 37 },
-  // Primal Reversions
-  kyogre_primal: { id: 10077, name: 'Primal Kyogre', generation: PokemonGeneration.Gen6, cry: 'Kyogre!', possibleColors: [PokemonColor.default, PokemonColor.shiny], originalSpriteSize: 77 },
-  groudon_primal: { id: 10078, name: 'Primal Groudon', generation: PokemonGeneration.Gen6, cry: 'Groudon!', possibleColors: [PokemonColor.default, PokemonColor.shiny], originalSpriteSize: 62 },
 };
 
 export function getAllPokemon(): PokemonType[] {
@@ -4709,22 +4657,6 @@ export function getDefaultPokemon(): PokemonType {
 export function getRandomPokemonConfig(): [PokemonType, PokemonConfig] {
   const keys = Object.keys(POKEMON_DATA);
   const randomKey = keys[Math.floor(Math.random() * keys.length)];
-  return [randomKey as PokemonType, POKEMON_DATA[randomKey]];
-}
-
-/**
- * Returns a random Mega Evolution or Primal Reversion (Gen 6 entries).
- * Falls back to `getRandomPokemonConfig()` if no Gen 6 entries are registered,
- * so callers never receive an undefined pair even in a broken data state.
- */
-export function getRandomMegaConfig(): [PokemonType, PokemonConfig] {
-  const megaKeys = Object.entries(POKEMON_DATA)
-    .filter(([, config]) => config.generation === PokemonGeneration.Gen6)
-    .map(([key]) => key);
-  if (megaKeys.length === 0) {
-    return getRandomPokemonConfig();
-  }
-  const randomKey = megaKeys[Math.floor(Math.random() * megaKeys.length)];
   return [randomKey as PokemonType, POKEMON_DATA[randomKey]];
 }
 
