@@ -23,6 +23,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Ivysaur!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 36,
   },
   venusaur: {
     id: 3,
@@ -30,6 +31,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Venusaur!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 45,
   },
   venusaur_female: {
     id: 3,
@@ -37,6 +39,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Venusaur!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 45,
   },
   charmander: {
     id: 4,
@@ -44,6 +47,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Charmander!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 30,
   },
   charmeleon: {
     id: 5,
@@ -51,6 +55,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Charmeleon!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 37,
   },
   charizard: {
     id: 6,
@@ -59,6 +64,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Charizard!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 43,
   },
   squirtle: {
     id: 7,
@@ -66,6 +72,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Squritle!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   wartortle: {
     id: 8,
@@ -73,6 +80,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Wartortle!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 36,
   },
   blastoise: {
     id: 9,
@@ -80,6 +88,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Blastoise!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 42,
   },
   caterpie: {
     id: 10,
@@ -87,6 +96,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Caterpie!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 24,
   },
   metapod: {
     id: 11,
@@ -102,6 +112,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Butterfree!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 37,
   },
   weedle: {
     id: 13,
@@ -109,6 +120,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Weedle!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 24,
   },
   kakuna: {
     id: 14,
@@ -116,6 +128,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Kakuna!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 30,
   },
   beedrill: {
     id: 15,
@@ -123,6 +136,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Beedrill!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 36,
   },
   pidgey: {
     id: 16,
@@ -131,6 +145,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Pidgey!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 24,
   },
   pidgeotto: {
     id: 17,
@@ -139,6 +154,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Pidgeotto!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 37,
   },
   pidgeot: {
     id: 18,
@@ -147,6 +163,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Pidgeot!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 41,
   },
   rattata: {
     id: 19,
@@ -154,6 +171,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Rattata!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 24,
   },
   raticate: {
     id: 20,
@@ -169,6 +187,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Spearow!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 24,
   },
   fearow: {
     id: 22,
@@ -177,6 +196,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Fearow!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 38,
   },
   ekans: {
     id: 23,
@@ -184,6 +204,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Ekans!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 45,
   },
   arbok: {
     id: 24,
@@ -191,6 +212,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Arbok!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 55,
   },
   pikachu: {
     id: 25,
@@ -198,6 +220,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Pikachu!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 27,
   },
   pikachu_female: {
     id: 25,
@@ -205,6 +228,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Pikachu!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 27,
   },
   raichu: {
     id: 26,
@@ -212,6 +236,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Raichu!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 33,
   },
   sandshrew: {
     id: 27,
@@ -219,6 +244,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Sandshrew!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 30,
   },
   sandslash: {
     id: 28,
@@ -226,6 +252,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Sandslash!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 36,
   },
   nidoran_female: {
     id: 29,
@@ -233,6 +260,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Nidoran!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 27,
   },
   nidorina: {
     id: 30,
@@ -240,6 +268,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Nidorina!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 33,
   },
   nidoqueen: {
     id: 31,
@@ -247,6 +276,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Nidoqueen!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 39,
   },
   nidoran_male: {
     id: 32,
@@ -254,6 +284,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Nidoran!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   nidorino: {
     id: 33,
@@ -261,6 +292,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Nidorino!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 35,
   },
   nidoking: {
     id: 34,
@@ -268,6 +300,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Nidoking!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 40,
   },
   clefairy: {
     id: 35,
@@ -275,6 +308,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Clefairy!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 30,
   },
   clefable: {
     id: 36,
@@ -282,6 +316,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Clefable!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 39,
   },
   vulpix: {
     id: 37,
@@ -289,6 +324,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Vulpix!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 30,
   },
   ninetales: {
     id: 38,
@@ -296,6 +332,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Ninetales!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 37,
   },
   jigglypuff: {
     id: 39,
@@ -303,6 +340,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Jigglypuff!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   wigglytuff: {
     id: 40,
@@ -310,6 +348,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Wigglytuff!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 36,
   },
   zubat: {
     id: 41,
@@ -318,6 +357,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Zubat!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 33,
   },
   golbat: {
     id: 42,
@@ -326,6 +366,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Golbat!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 42,
   },
   oddish: {
     id: 43,
@@ -333,6 +374,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Oddish!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   gloom: {
     id: 44,
@@ -340,6 +382,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Gloom!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 33,
   },
   vileplume: {
     id: 45,
@@ -347,6 +390,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Vileplume!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 38,
   },
   paras: {
     id: 46,
@@ -354,6 +398,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Paras!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 24,
   },
   parasect: {
     id: 47,
@@ -361,6 +406,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Parasect!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 36,
   },
   venonat: {
     id: 48,
@@ -368,6 +414,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Venonat!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 36,
   },
   venomoth: {
     id: 49,
@@ -376,6 +423,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Venomoth!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 41,
   },
   diglett: {
     id: 50,
@@ -383,6 +431,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Diglett!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 21,
   },
   dugtrio: {
     id: 51,
@@ -397,6 +446,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Meowth!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 27,
   },
   persian: {
     id: 53,
@@ -404,6 +454,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Persian!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 36,
   },
   psyduck: {
     id: 54,
@@ -411,6 +462,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Psyduck!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 33,
   },
   golduck: {
     id: 55,
@@ -418,6 +470,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Golduck!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 43,
   },
   mankey: {
     id: 56,
@@ -425,6 +478,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Mankey!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   primeape: {
     id: 57,
@@ -432,6 +486,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Primeape!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 36,
   },
   growlithe: {
     id: 58,
@@ -446,6 +501,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Arcanine!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 45,
   },
   poliwag: {
     id: 60,
@@ -453,6 +509,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Poliwag!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 30,
   },
   poliwhirl: {
     id: 61,
@@ -460,6 +517,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Poliwhirl!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 36,
   },
   poliwrath: {
     id: 62,
@@ -467,6 +525,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Poliwrath!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 39,
   },
   abra: {
     id: 63,
@@ -474,6 +533,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Abra!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 35,
   },
   kadabra: {
     id: 64,
@@ -481,6 +541,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Kadabra!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 39,
   },
   alakazam: {
     id: 65,
@@ -488,6 +549,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Alakazam!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 41,
   },
   machop: {
     id: 66,
@@ -495,6 +557,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Machop!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 33,
   },
   machoke: {
     id: 67,
@@ -502,6 +565,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Machoke!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 41,
   },
   machamp: {
     id: 68,
@@ -509,6 +573,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Alakazam!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 42,
   },
   bellsprout: {
     id: 69,
@@ -523,6 +588,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Weepinbell!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 36,
   },
   victreebel: {
     id: 71,
@@ -530,6 +596,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Victreebel!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 43,
   },
   tentacool: {
     id: 72,
@@ -537,6 +604,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Tentacool!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 35,
   },
   tentacruel: {
     id: 73,
@@ -544,6 +612,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Tentacruel!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 42,
   },
   geodude: {
     id: 74,
@@ -551,6 +620,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Geodude!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 27,
   },
   graveler: {
     id: 75,
@@ -558,6 +628,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Graveler!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 36,
   },
   golem: {
     id: 76,
@@ -565,6 +636,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Golem!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 40,
   },
   ponyta: {
     id: 77,
@@ -572,6 +644,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Ponyta!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 36,
   },
   rapidash: {
     id: 78,
@@ -579,6 +652,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Rapidash!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 43,
   },
   slowpoke: {
     id: 79,
@@ -586,6 +660,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Slowpoke!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 38,
   },
   slowbro: {
     id: 80,
@@ -593,6 +668,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Slowbro!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 42,
   },
   magnemite: {
     id: 81,
@@ -600,6 +676,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Magnemite!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 24,
   },
   magneton: {
     id: 82,
@@ -607,6 +684,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Magneton!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 36,
   },
   farfetchd: {
     id: 83,
@@ -615,6 +693,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: "Farfetch'd!",
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 33,
   },
   doduo: {
     id: 84,
@@ -623,6 +702,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Doduo!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 40,
   },
   dodrio: {
     id: 85,
@@ -631,6 +711,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Dodrio!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 44,
   },
   seel: {
     id: 86,
@@ -638,6 +719,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Seel!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 37,
   },
   dewgong: {
     id: 87,
@@ -645,6 +727,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Dewgong!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 43,
   },
   grimer: {
     id: 88,
@@ -652,6 +735,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Grimer!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 35,
   },
   muk: {
     id: 89,
@@ -659,6 +743,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Muk!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 38,
   },
   shellder: {
     id: 90,
@@ -666,6 +751,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Shellder!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 24,
   },
   cloyster: {
     id: 91,
@@ -673,6 +759,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Cloyster!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 41,
   },
   gastly: {
     id: 92,
@@ -680,6 +767,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Gastly!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 39,
   },
   haunter: {
     id: 93,
@@ -687,6 +775,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Haunter!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 42,
   },
   gengar: {
     id: 94,
@@ -694,6 +783,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Gengar!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 41,
   },
   onix: {
     id: 95,
@@ -701,6 +791,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Onix!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 74,
   },
   drowzee: {
     id: 96,
@@ -708,6 +799,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Drowzee!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 36,
   },
   hypno: {
     id: 97,
@@ -715,6 +807,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Hypno!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 42,
   },
   krabby: {
     id: 98,
@@ -722,6 +815,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Krabby!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 27,
   },
   kingler: {
     id: 99,
@@ -729,6 +823,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Kingler!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 39,
   },
   voltorb: {
     id: 100,
@@ -736,6 +831,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Voltorb!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   electrode: {
     id: 101,
@@ -743,6 +839,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Electrode!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 38,
   },
   exeggcute: {
     id: 102,
@@ -750,6 +847,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Exeggcute!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 27,
   },
   exeggutor: {
     id: 103,
@@ -757,6 +855,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Exeggutor!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 45,
   },
   cubone: {
     id: 104,
@@ -764,6 +863,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Cubone!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 27,
   },
   marowak: {
     id: 105,
@@ -771,6 +871,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Marowak!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 36,
   },
   hitmonlee: {
     id: 106,
@@ -778,6 +879,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Hitmonlee!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 41,
   },
   hitmonchan: {
     id: 107,
@@ -785,6 +887,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Hitmonchan!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 40,
   },
   lickitung: {
     id: 108,
@@ -792,6 +895,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Lickitung!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 38,
   },
   koffing: {
     id: 109,
@@ -799,6 +903,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Koffing!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 30,
   },
   weezing: {
     id: 110,
@@ -806,6 +911,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Weezing!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 38,
   },
   rhyhorn: {
     id: 111,
@@ -813,6 +919,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Rhyhorn!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 36,
   },
   rhydon: {
     id: 112,
@@ -820,6 +927,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Rhydon!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 45,
   },
   chansey: {
     id: 113,
@@ -827,6 +935,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Chansey!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 37,
   },
   tangela: {
     id: 114,
@@ -834,6 +943,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Tangela!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 36,
   },
   kangaskhan: {
     id: 115,
@@ -841,6 +951,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Kangaskhan!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 47,
   },
   horsea: {
     id: 116,
@@ -848,6 +959,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Horsea!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 27,
   },
   seadra: {
     id: 117,
@@ -855,6 +967,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Seadra!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 38,
   },
   goldeen: {
     id: 118,
@@ -862,6 +975,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Goldeen!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 30,
   },
   seaking: {
     id: 119,
@@ -869,6 +983,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Seaking!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 39,
   },
   staryu: {
     id: 120,
@@ -876,6 +991,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Staryu!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 33,
   },
   starmie: {
     id: 121,
@@ -883,6 +999,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Starmie!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 37,
   },
   mrmime: {
     id: 122,
@@ -890,6 +1007,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Mr. Mime!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 39,
   },
   scyther: {
     id: 123,
@@ -898,6 +1016,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Scyther!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 41,
   },
   jynx: {
     id: 124,
@@ -905,6 +1024,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Jynx!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 40,
   },
   electabuzz: {
     id: 125,
@@ -912,6 +1032,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Electabuzz!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 37,
   },
   magmar: {
     id: 126,
@@ -919,6 +1040,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Magmar!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 39,
   },
   pinsir: {
     id: 127,
@@ -926,6 +1048,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Pinsir!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 41,
   },
   tauros: {
     id: 128,
@@ -933,6 +1056,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Tauros!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 40,
   },
   magikarp: {
     id: 129,
@@ -940,6 +1064,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Magikarp!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 35,
   },
   gyarados: {
     id: 130,
@@ -947,6 +1072,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Gyarados!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 67,
   },
   lapras: {
     id: 131,
@@ -954,6 +1080,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Lapras!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 49,
   },
   ditto: {
     id: 132,
@@ -961,6 +1088,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Ditto!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 24,
   },
   eevee: {
     id: 133,
@@ -968,6 +1096,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Eevee!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 24,
   },
   vaporeon: {
     id: 134,
@@ -975,6 +1104,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Vaporeon!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 36,
   },
   jolteon: {
     id: 135,
@@ -982,6 +1112,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Jolteon!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 33,
   },
   flareon: {
     id: 136,
@@ -989,6 +1120,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Flareon!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 35,
   },
   porygon: {
     id: 137,
@@ -996,6 +1128,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Porygon!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 33,
   },
   omanyte: {
     id: 138,
@@ -1003,6 +1136,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Omanyte!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 27,
   },
   omastar: {
     id: 139,
@@ -1010,6 +1144,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Omastar!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 36,
   },
   kabuto: {
     id: 140,
@@ -1017,6 +1152,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Kabuto!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   kabutops: {
     id: 141,
@@ -1024,6 +1160,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Kabutops!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 39,
   },
   aerodactyl: {
     id: 142,
@@ -1032,6 +1169,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Aerodactyl!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 44,
   },
   snorlax: {
     id: 143,
@@ -1039,6 +1177,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Snorlax!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 46,
   },
   articuno: {
     id: 144,
@@ -1047,6 +1186,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Articuno!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 43,
   },
   zapdos: {
     id: 145,
@@ -1055,6 +1195,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Zapdos!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 42,
   },
   moltres: {
     id: 146,
@@ -1063,6 +1204,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Moltres!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 45,
   },
   dratini: {
     id: 147,
@@ -1070,6 +1212,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Dratini!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 44,
   },
   dragonair: {
     id: 148,
@@ -1077,6 +1220,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Dragonair!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 57,
   },
   dragonite: {
     id: 149,
@@ -1085,6 +1229,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Dragonite!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 47,
   },
   mewtwo: {
     id: 150,
@@ -1092,6 +1237,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen1,
     cry: 'Mewtwo!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 45,
   },
   mew: {
     id: 151,
@@ -1100,6 +1246,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Mew!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 27,
   },
   // Generation 2
   chikorita: {
@@ -1108,6 +1255,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Chikorita!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 35,
   },
   bayleef: {
     id: 153,
@@ -1115,6 +1263,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Bayleef!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 38,
   },
   meganium: {
     id: 154,
@@ -1122,6 +1271,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Meganium!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 44,
   },
   meganium_female: {
     id: 154,
@@ -1129,6 +1279,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Meganium!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 44,
   },
   cyndaquil: {
     id: 155,
@@ -1136,6 +1287,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Cyndaquil!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   quilava: {
     id: 156,
@@ -1143,6 +1295,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Quilava!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 35,
   },
   typhlosion: {
     id: 157,
@@ -1150,6 +1303,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Typhlosion!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 43,
   },
   totodile: {
     id: 158,
@@ -1157,6 +1311,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Totodile!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 30,
   },
   croconaw: {
     id: 159,
@@ -1164,6 +1319,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Croconaw!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 37,
   },
   feraligatr: {
     id: 160,
@@ -1171,6 +1327,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Feraligatr!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 48,
   },
   sentret: {
     id: 161,
@@ -1178,6 +1335,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Sentret!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 33,
   },
   furret: {
     id: 162,
@@ -1185,6 +1343,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Furret!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 44,
   },
   hoothoot: {
     id: 163,
@@ -1201,6 +1360,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Noctowl!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 42,
   },
   ledyba: {
     id: 165,
@@ -1209,6 +1369,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Ledyba!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 36,
   },
   ledian: {
     id: 166,
@@ -1217,6 +1378,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Ledian!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 40,
   },
   spinarak: {
     id: 167,
@@ -1224,6 +1386,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Spinarak!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   ariados: {
     id: 168,
@@ -1231,6 +1394,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Ariados!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 37,
   },
   crobat: {
     id: 169,
@@ -1239,6 +1403,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Crobat!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 44,
   },
   chinchou: {
     id: 170,
@@ -1246,6 +1411,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Chinchou!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   lanturn: {
     id: 171,
@@ -1253,6 +1419,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Lanturn!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 38,
   },
   pichu: {
     id: 172,
@@ -1260,6 +1427,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Pichu!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 24,
   },
   pichu_spiky_eared: {
     id: 172,
@@ -1267,6 +1435,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Pichu!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 24,
   },
   cleffa: {
     id: 173,
@@ -1274,6 +1443,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Cleffa!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 24,
   },
   igglybuff: {
     id: 174,
@@ -1281,6 +1451,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Igglybuff!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 24,
   },
   togepi: {
     id: 175,
@@ -1288,6 +1459,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Togepi!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 24,
   },
   togetic: {
     id: 176,
@@ -1296,6 +1468,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Togetic!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 30,
   },
   natu: {
     id: 177,
@@ -1303,6 +1476,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Natu!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 21,
   },
   xatu: {
     id: 178,
@@ -1311,6 +1485,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Xatu!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 41,
   },
   mareep: {
     id: 179,
@@ -1318,6 +1493,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Mareep!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 30,
   },
   flaaffy: {
     id: 180,
@@ -1325,6 +1501,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Flaaffy!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 33,
   },
   ampharos: {
     id: 181,
@@ -1332,6 +1509,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Ampharos!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 40,
   },
   bellossom: {
     id: 182,
@@ -1339,6 +1517,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Bellossom!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 27,
   },
   marill: {
     id: 183,
@@ -1346,6 +1525,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Marill!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 27,
   },
   azumarill: {
     id: 184,
@@ -1353,6 +1533,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Azumarill!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 33,
   },
   sudowoodo: {
     id: 185,
@@ -1360,6 +1541,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Sudowoodo!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 38,
   },
   politoed: {
     id: 186,
@@ -1367,6 +1549,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Politoed!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 37,
   },
   hoppip: {
     id: 187,
@@ -1374,6 +1557,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Hoppip!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 27,
   },
   skiploom: {
     id: 188,
@@ -1381,6 +1565,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Skiploom!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 30,
   },
   jumpluff: {
     id: 189,
@@ -1388,6 +1573,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Jumpluff!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 33,
   },
   aipom: {
     id: 190,
@@ -1395,6 +1581,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Aipom!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 33,
   },
   sunkern: {
     id: 191,
@@ -1402,6 +1589,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Sunkern!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 24,
   },
   sunflora: {
     id: 192,
@@ -1409,6 +1597,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Sunflora!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 33,
   },
   yanma: {
     id: 193,
@@ -1416,6 +1605,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Yanma!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 38,
   },
   wooper: {
     id: 194,
@@ -1423,6 +1613,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Wooper!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 27,
   },
   quagsire: {
     id: 195,
@@ -1430,6 +1621,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Quagsire!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 40,
   },
   espeon: {
     id: 196,
@@ -1437,6 +1629,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Espeon!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 35,
   },
   umbreon: {
     id: 197,
@@ -1444,6 +1637,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Umbreon!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 36,
   },
   murkrow: {
     id: 198,
@@ -1452,6 +1646,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Murkrow!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 29,
   },
   slowking: {
     id: 199,
@@ -1459,6 +1654,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Slowking!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 45,
   },
   misdreavus: {
     id: 200,
@@ -1473,6 +1669,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Unown!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   unown_b: {
     id: 201,
@@ -1480,6 +1677,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Unown!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   unown_c: {
     id: 201,
@@ -1487,6 +1685,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Unown!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   unown_d: {
     id: 201,
@@ -1494,6 +1693,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Unown!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   unown_e: {
     id: 201,
@@ -1501,6 +1701,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Unown!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   unown_f: {
     id: 201,
@@ -1508,6 +1709,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Unown!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   unown_g: {
     id: 201,
@@ -1515,6 +1717,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Unown!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   unown_h: {
     id: 201,
@@ -1522,6 +1725,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Unown!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   unown_i: {
     id: 201,
@@ -1529,6 +1733,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Unown!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   unown_j: {
     id: 201,
@@ -1536,6 +1741,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Unown!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   unown_k: {
     id: 201,
@@ -1543,6 +1749,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Unown!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   unown_l: {
     id: 201,
@@ -1550,6 +1757,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Unown!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   unown_m: {
     id: 201,
@@ -1557,6 +1765,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Unown!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   unown_n: {
     id: 201,
@@ -1564,6 +1773,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Unown!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   unown_o: {
     id: 201,
@@ -1571,6 +1781,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Unown!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   unown_p: {
     id: 201,
@@ -1578,6 +1789,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Unown!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   unown_q: {
     id: 201,
@@ -1585,6 +1797,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Unown!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   unown_r: {
     id: 201,
@@ -1592,6 +1805,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Unown!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   unown_s: {
     id: 201,
@@ -1599,6 +1813,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Unown!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   unown_t: {
     id: 201,
@@ -1606,6 +1821,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Unown!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   unown_u: {
     id: 201,
@@ -1613,6 +1829,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Unown!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   unown_v: {
     id: 201,
@@ -1620,6 +1837,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Unown!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   unown_w: {
     id: 201,
@@ -1627,6 +1845,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Unown!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   unown_x: {
     id: 201,
@@ -1634,6 +1853,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Unown!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   unown_y: {
     id: 201,
@@ -1641,6 +1861,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Unown!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   unown_z: {
     id: 201,
@@ -1648,6 +1869,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Unown!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   unown_exclamation: {
     id: 201,
@@ -1655,6 +1877,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Unown!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   unown_question: {
     id: 201,
@@ -1662,6 +1885,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Unown!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   wobbuffet_male: {
     id: 202,
@@ -1669,6 +1893,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Wobbuffet!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 39,
   },
   wobbuffet_female: {
     id: 202,
@@ -1676,6 +1901,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Wobbuffet!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 39,
   },
   girafarig: {
     id: 203,
@@ -1683,6 +1909,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Girafarig!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 41,
   },
   pineco: {
     id: 204,
@@ -1690,6 +1917,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Pineco!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 30,
   },
   forretress: {
     id: 205,
@@ -1697,6 +1925,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Forretress!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 38,
   },
   dunsparce: {
     id: 206,
@@ -1704,6 +1933,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Dunsparce!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 41,
   },
   gligar: {
     id: 207,
@@ -1712,6 +1942,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Gligar!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 37,
   },
   steelix: {
     id: 208,
@@ -1719,7 +1950,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Steelix!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
-    originalSpriteSize: 64,
+    originalSpriteSize: 76,
   },
   steelix_female: {
     id: 208,
@@ -1727,7 +1958,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Steelix!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
-    originalSpriteSize: 64,
+    originalSpriteSize: 76,
   },
   snubbull: {
     id: 209,
@@ -1735,6 +1966,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Snubbull!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 30,
   },
   granbull: {
     id: 210,
@@ -1742,6 +1974,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Granbull!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 40,
   },
   qwilfish: {
     id: 211,
@@ -1749,6 +1982,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Qwilfish!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   scizor: {
     id: 212,
@@ -1756,6 +1990,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Scizor!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 44,
   },
   shuckle: {
     id: 213,
@@ -1763,6 +1998,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Shuckle!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 30,
   },
   heracross_male: {
     id: 214,
@@ -1770,6 +2006,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Heracross!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 41,
   },
   heracross_female: {
     id: 214,
@@ -1777,6 +2014,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Heracross!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 41,
   },
   sneasel: {
     id: 215,
@@ -1784,6 +2022,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Sneasel!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 35,
   },
   teddiursa: {
     id: 216,
@@ -1791,6 +2030,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Teddiursa!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 30,
   },
   ursaring: {
     id: 217,
@@ -1798,6 +2038,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Ursaring!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 44,
   },
   slugma: {
     id: 218,
@@ -1812,6 +2053,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Magcargo!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 33,
   },
   swinub: {
     id: 220,
@@ -1819,6 +2061,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Swinub!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 27,
   },
   piloswine: {
     id: 221,
@@ -1826,6 +2069,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Piloswine!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 37,
   },
   corsola: {
     id: 222,
@@ -1833,6 +2077,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Corsola!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 30,
   },
   remoraid: {
     id: 223,
@@ -1840,6 +2085,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Remoraid!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 30,
   },
   octillery: {
     id: 224,
@@ -1847,6 +2093,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Octillery!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 35,
   },
   delibird: {
     id: 225,
@@ -1855,6 +2102,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Delibird!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 35,
   },
   mantine: {
     id: 226,
@@ -1863,6 +2111,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Mantine!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 46,
   },
   skarmory: {
     id: 227,
@@ -1871,6 +2120,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Skarmory!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 43,
   },
   houndour: {
     id: 228,
@@ -1878,6 +2128,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Houndour!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 30,
   },
   houndoom: {
     id: 229,
@@ -1885,6 +2136,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Houndoom!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 40,
   },
   kingdra: {
     id: 230,
@@ -1892,6 +2144,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Kingdra!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 44,
   },
   phanpy: {
     id: 231,
@@ -1899,6 +2152,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Phanpy!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   donphan: {
     id: 232,
@@ -1906,6 +2160,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Donphan!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 37,
   },
   porygon2: {
     id: 233,
@@ -1913,6 +2168,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Porygon2!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 30,
   },
   stantler: {
     id: 234,
@@ -1920,6 +2176,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Stantler!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 40,
   },
   smeargle: {
     id: 235,
@@ -1927,6 +2184,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Smeargle!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 38,
   },
   tyrogue: {
     id: 236,
@@ -1941,6 +2199,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Hitmontop!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 40,
   },
   smoochum: {
     id: 238,
@@ -1948,6 +2207,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Smoochum!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 27,
   },
   elekid: {
     id: 239,
@@ -1955,6 +2215,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Elekid!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 30,
   },
   magby: {
     id: 240,
@@ -1969,6 +2230,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Miltank!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 38,
   },
   blissey: {
     id: 242,
@@ -1976,6 +2238,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Blissey!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 41,
   },
   raikou: {
     id: 243,
@@ -1983,6 +2246,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Raikou!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 45,
   },
   entei: {
     id: 244,
@@ -1990,6 +2254,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Entei!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 46,
   },
   suicune: {
     id: 245,
@@ -1997,6 +2262,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Suicune!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 45,
   },
   larvitar: {
     id: 246,
@@ -2004,6 +2270,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Larvitar!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 30,
   },
   pupitar: {
     id: 247,
@@ -2011,6 +2278,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Pupitar!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 38,
   },
   tyranitar: {
     id: 248,
@@ -2018,6 +2286,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Tyranitar!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 45,
   },
   lugia: {
     id: 249,
@@ -2025,7 +2294,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Lugia!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
-    originalSpriteSize: 64,
+    originalSpriteSize: 62,
     isFlying: true,
   },
   hooh: {
@@ -2034,7 +2303,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen2,
     cry: 'Ho-Oh!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
-    originalSpriteSize: 64,
+    originalSpriteSize: 56,
     isFlying: true,
   },
   celebi: {
@@ -2044,6 +2313,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Celebi!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 30,
   },
   // Generation 3
   treecko: {
@@ -2052,6 +2322,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Treecko!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   grovyle: {
     id: 253,
@@ -2059,6 +2330,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Grovyle!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 35,
   },
   sceptile: {
     id: 254,
@@ -2066,6 +2338,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Sceptile!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 43,
   },
   torchic: {
     id: 255,
@@ -2073,6 +2346,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Torchic!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 27,
   },
   combusken: {
     id: 256,
@@ -2080,6 +2354,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Combusken!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 35,
   },
   blaziken: {
     id: 257,
@@ -2087,6 +2362,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Blaziken!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 45,
   },
   mudkip: {
     id: 258,
@@ -2094,6 +2370,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Mudkip!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 27,
   },
   marshtomp: {
     id: 259,
@@ -2108,6 +2385,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Swampert!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 41,
   },
   poochyena: {
     id: 261,
@@ -2115,6 +2393,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Poochyena!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   mightyena: {
     id: 262,
@@ -2122,6 +2401,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Mightyena!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 36,
   },
   zigzagoon: {
     id: 263,
@@ -2129,6 +2409,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Zigzagoon!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 27,
   },
   linoone: {
     id: 264,
@@ -2136,6 +2417,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Linoone!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   wurmple: {
     id: 265,
@@ -2143,6 +2425,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Wurmple!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 24,
   },
   silcoon: {
     id: 266,
@@ -2150,6 +2433,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Silcoon!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 30,
   },
   beautifly: {
     id: 267,
@@ -2158,6 +2442,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Beautifly!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 36,
   },
   cascoon: {
     id: 268,
@@ -2173,6 +2458,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Dustox!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 38,
   },
   lotad: {
     id: 270,
@@ -2180,6 +2466,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Lotad!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   lombre: {
     id: 271,
@@ -2187,6 +2474,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Lombre!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 38,
   },
   ludicolo: {
     id: 272,
@@ -2194,6 +2482,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Ludicolo!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 41,
   },
   seedot: {
     id: 273,
@@ -2201,6 +2490,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Seedot!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   nuzleaf: {
     id: 274,
@@ -2208,6 +2498,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Nuzleaf!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 36,
   },
   shiftry: {
     id: 275,
@@ -2215,6 +2506,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Shiftry!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 39,
   },
   taillow: {
     id: 276,
@@ -2223,6 +2515,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Taillow!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 24,
   },
   swellow: {
     id: 277,
@@ -2239,6 +2532,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Wingull!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 30,
   },
   pelipper: {
     id: 279,
@@ -2247,6 +2541,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Pelipper!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 38,
   },
   ralts: {
     id: 280,
@@ -2254,6 +2549,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Ralts!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 27,
   },
   kirlia: {
     id: 281,
@@ -2261,6 +2557,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Kirlia!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 33,
   },
   gardevoir: {
     id: 282,
@@ -2268,6 +2565,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Gardevoir!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 42,
   },
   surskit: {
     id: 283,
@@ -2275,6 +2573,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Surskit!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   masquerain: {
     id: 284,
@@ -2283,6 +2582,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Masquerain!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 33,
   },
   shroomish: {
     id: 285,
@@ -2290,6 +2590,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Shroomish!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 27,
   },
   breloom: {
     id: 286,
@@ -2297,6 +2598,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Breloom!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 38,
   },
   slakoth: {
     id: 287,
@@ -2304,6 +2606,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Slakoth!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 33,
   },
   vigoroth: {
     id: 288,
@@ -2311,6 +2614,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Vigoroth!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 40,
   },
   slaking: {
     id: 289,
@@ -2318,6 +2622,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Slaking!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 45,
   },
   nincada: {
     id: 290,
@@ -2325,6 +2630,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Nincada!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   ninjask: {
     id: 291,
@@ -2333,6 +2639,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Ninjask!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 33,
   },
   shedinja: {
     id: 292,
@@ -2341,6 +2648,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Shedinja!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 33,
   },
   whismur: {
     id: 293,
@@ -2348,6 +2656,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Whismur!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 30,
   },
   loudred: {
     id: 294,
@@ -2355,6 +2664,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Loudred!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 36,
   },
   exploud: {
     id: 295,
@@ -2362,6 +2672,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Exploud!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 41,
   },
   makuhita: {
     id: 296,
@@ -2369,6 +2680,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Makuhita!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 36,
   },
   hariyama: {
     id: 297,
@@ -2376,6 +2688,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Hariyama!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 48,
   },
   azurill: {
     id: 298,
@@ -2383,6 +2696,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Azurill!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 21,
   },
   nosepass: {
     id: 299,
@@ -2390,6 +2704,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Nosepass!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 36,
   },
   skitty: {
     id: 300,
@@ -2397,6 +2712,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Skitty!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 30,
   },
   delcatty: {
     id: 301,
@@ -2404,6 +2720,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Delcatty!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 37,
   },
   sableye: {
     id: 302,
@@ -2411,6 +2728,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Sableye!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   mawile: {
     id: 303,
@@ -2418,6 +2736,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Mawile!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 30,
   },
   aron: {
     id: 304,
@@ -2425,6 +2744,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Aron!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 27,
   },
   lairon: {
     id: 305,
@@ -2432,6 +2752,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Lairon!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 35,
   },
   aggron: {
     id: 306,
@@ -2439,6 +2760,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Aggron!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 46,
   },
   meditite: {
     id: 307,
@@ -2446,6 +2768,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Meditite!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 30,
   },
   medicham: {
     id: 308,
@@ -2453,6 +2776,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Medicham!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 39,
   },
   electrike: {
     id: 309,
@@ -2460,6 +2784,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Electrike!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 30,
   },
   manectric: {
     id: 310,
@@ -2467,6 +2792,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Manectric!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 41,
   },
   plusle: {
     id: 311,
@@ -2474,6 +2800,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Plusle!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 27,
   },
   minun: {
     id: 312,
@@ -2481,6 +2808,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Minun!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 27,
   },
   volbeat: {
     id: 313,
@@ -2495,6 +2823,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Illumise!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 30,
   },
   roselia: {
     id: 315,
@@ -2502,6 +2831,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Roselia!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 24,
   },
   gulpin: {
     id: 316,
@@ -2509,6 +2839,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Gulpin!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 27,
   },
   swalot: {
     id: 317,
@@ -2516,6 +2847,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Swalot!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 43,
   },
   carvanha: {
     id: 318,
@@ -2523,6 +2855,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Carvanha!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 33,
   },
   sharpedo: {
     id: 319,
@@ -2530,6 +2863,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Sharpedo!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 44,
   },
   wailmer: {
     id: 320,
@@ -2537,6 +2871,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Wailmer!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 45,
   },
   wailord: {
     id: 321,
@@ -2544,7 +2879,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Wailord!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
-    originalSpriteSize: 64,
+    originalSpriteSize: 88,
   },
   numel: {
     id: 322,
@@ -2559,6 +2894,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Camerupt!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 45,
   },
   torkoal: {
     id: 324,
@@ -2566,6 +2902,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Torkoal!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   spoink: {
     id: 325,
@@ -2580,6 +2917,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Grumpig!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 35,
   },
   spinda: {
     id: 327,
@@ -2587,6 +2925,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Spinda!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 37,
   },
   trapinch: {
     id: 328,
@@ -2602,6 +2941,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Vibrava!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 37,
   },
   flygon: {
     id: 330,
@@ -2610,6 +2950,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Flygon!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 45,
   },
   cacnea: {
     id: 331,
@@ -2617,6 +2958,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Cacnea!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 27,
   },
   cacturne: {
     id: 332,
@@ -2624,6 +2966,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Cacturne!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 39,
   },
   swablu: {
     id: 333,
@@ -2632,6 +2975,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Swablu!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 27,
   },
   altaria: {
     id: 334,
@@ -2640,6 +2984,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Altaria!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 37,
   },
   zangoose: {
     id: 335,
@@ -2647,6 +2992,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Zangoose!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 39,
   },
   seviper: {
     id: 336,
@@ -2654,6 +3000,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Seviper!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 50,
   },
   lunatone: {
     id: 337,
@@ -2661,6 +3008,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Lunatone!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 36,
   },
   solrock: {
     id: 338,
@@ -2668,6 +3016,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Solrock!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 38,
   },
   barboach: {
     id: 339,
@@ -2675,6 +3024,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Barboach!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 27,
   },
   whiscash: {
     id: 340,
@@ -2682,6 +3032,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Whiscash!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 35,
   },
   corphish: {
     id: 341,
@@ -2689,6 +3040,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Corphish!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 30,
   },
   crawdaunt: {
     id: 342,
@@ -2696,6 +3048,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Crawdaunt!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 37,
   },
   baltoy: {
     id: 343,
@@ -2703,6 +3056,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Baltoy!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   claydol: {
     id: 344,
@@ -2710,6 +3064,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Claydol!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 41,
   },
   lileep: {
     id: 345,
@@ -2717,6 +3072,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Lileep!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 36,
   },
   cradily: {
     id: 346,
@@ -2724,6 +3080,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Cradily!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 41,
   },
   anorith: {
     id: 347,
@@ -2738,6 +3095,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Armaldo!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 41,
   },
   feebas: {
     id: 349,
@@ -2745,6 +3103,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Feebas!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 30,
   },
   milotic: {
     id: 350,
@@ -2752,6 +3111,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Milotic!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 66,
   },
   castform: {
     id: 351,
@@ -2759,6 +3119,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Castform!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 24,
   },
   kecleon: {
     id: 352,
@@ -2766,6 +3127,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Kecleon!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 36,
   },
   shuppet: {
     id: 353,
@@ -2773,6 +3135,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Shuppet!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 30,
   },
   banette: {
     id: 354,
@@ -2780,6 +3143,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Banette!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 37,
   },
   duskull: {
     id: 355,
@@ -2787,6 +3151,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Duskull!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 33,
   },
   dusclops: {
     id: 356,
@@ -2794,6 +3159,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Dusclops!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 42,
   },
   tropius: {
     id: 357,
@@ -2802,6 +3168,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Tropius!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 45,
   },
   chimecho: {
     id: 358,
@@ -2809,6 +3176,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Chimecho!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 30,
   },
   absol: {
     id: 359,
@@ -2816,6 +3184,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Absol!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 38,
   },
   wynaut: {
     id: 360,
@@ -2823,6 +3192,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Wynaut!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 30,
   },
   snorunt: {
     id: 361,
@@ -2837,6 +3207,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Glalie!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 41,
   },
   spheal: {
     id: 363,
@@ -2844,6 +3215,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Spheal!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 33,
   },
   sealeo: {
     id: 364,
@@ -2851,6 +3223,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Sealeo!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 37,
   },
   walrein: {
     id: 365,
@@ -2858,6 +3231,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Walrein!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 40,
   },
   clamperl: {
     id: 366,
@@ -2865,6 +3239,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Clamperl!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 27,
   },
   huntail: {
     id: 367,
@@ -2872,6 +3247,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Huntail!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 43,
   },
   gorebyss: {
     id: 368,
@@ -2879,6 +3255,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Gorebyss!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 44,
   },
   relicanth: {
     id: 369,
@@ -2886,6 +3263,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Relicanth!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 36,
   },
   luvdisc: {
     id: 370,
@@ -2893,6 +3271,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Luvdisc!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 30,
   },
   bagon: {
     id: 371,
@@ -2900,6 +3279,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Bagon!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 30,
   },
   shelgon: {
     id: 372,
@@ -2907,6 +3287,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Shelgon!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 37,
   },
   salamence: {
     id: 373,
@@ -2915,6 +3296,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Salamence!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 41,
   },
   beldum: {
     id: 374,
@@ -2922,6 +3304,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Beldum!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 30,
   },
   metang: {
     id: 375,
@@ -2929,6 +3312,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Metang!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 38,
   },
   metagross: {
     id: 376,
@@ -2936,6 +3320,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Metagross!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 42,
   },
   regirock: {
     id: 377,
@@ -2943,6 +3328,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Regirock!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 43,
   },
   regice: {
     id: 378,
@@ -2950,6 +3336,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Regice!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 44,
   },
   registeel: {
     id: 379,
@@ -2957,6 +3344,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Registeel!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 45,
   },
   latias: {
     id: 380,
@@ -2965,6 +3353,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Latias!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 40,
   },
   latios: {
     id: 381,
@@ -2973,6 +3362,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Latios!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 45,
   },
   kyogre: {
     id: 382,
@@ -2980,7 +3370,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Kyogre!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
-    originalSpriteSize: 64,
+    originalSpriteSize: 60,
   },
   groudon: {
     id: 383,
@@ -2988,7 +3378,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Groudon!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
-    originalSpriteSize: 64,
+    originalSpriteSize: 55,
   },
   rayquaza: {
     id: 384,
@@ -2996,7 +3386,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Rayquaza!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
-    originalSpriteSize: 64,
+    originalSpriteSize: 69,
     isFlying: true,
   },
   jirachi: {
@@ -3005,6 +3395,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Jirachi!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 24,
   },
   deoxys: {
     id: 386,
@@ -3013,6 +3404,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Deoxys!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     extraSprites: [PokemonExtraSprite.leftFacing],
+    originalSpriteSize: 43,
   },
   deoxys_speed: {
     id: 386,
@@ -3021,6 +3413,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Deoxys!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     extraSprites: [PokemonExtraSprite.leftFacing],
+    originalSpriteSize: 43,
   },
   deoxys_attack: {
     id: 386,
@@ -3029,6 +3422,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Deoxys!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     extraSprites: [PokemonExtraSprite.leftFacing],
+    originalSpriteSize: 43,
   },
   deoxys_defense: {
     id: 386,
@@ -3036,6 +3430,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen3,
     cry: 'Deoxys!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 43,
   },
   // Generation 4
   turtwig: {
@@ -3044,6 +3439,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Turtwig!',
     possibleColors: [PokemonColor.default],
+    originalSpriteSize: 27,
   },
   grotle: {
     id: 388,
@@ -3051,6 +3447,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Grotle!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 37,
   },
   torterra: {
     id: 389,
@@ -3059,6 +3456,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Torterra!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     extraSprites: [PokemonExtraSprite.leftFacing],
+    originalSpriteSize: 47,
   },
   chimchar: {
     id: 390,
@@ -3066,6 +3464,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Chimchar!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   monferno: {
     id: 391,
@@ -3073,6 +3472,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Monferno!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 35,
   },
   infernape: {
     id: 392,
@@ -3080,6 +3480,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Infernape!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 38,
   },
   piplup: {
     id: 393,
@@ -3087,6 +3488,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Piplup!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 27,
   },
   prinplup: {
     id: 394,
@@ -3094,6 +3496,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Prinplup!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 33,
   },
   empoleon: {
     id: 395,
@@ -3101,6 +3504,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Empoleon!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 43,
   },
   starly: {
     id: 396,
@@ -3109,6 +3513,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Starly!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 24,
   },
   staravia: {
     id: 397,
@@ -3117,6 +3522,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Staravia!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 30,
   },
   staraptor: {
     id: 398,
@@ -3125,6 +3531,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Staraptor!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 38,
   },
   bidoof: {
     id: 399,
@@ -3132,6 +3539,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Bidoof!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   bibarel: {
     id: 400,
@@ -3139,6 +3547,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Bibarel!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 36,
   },
   kricketot: {
     id: 401,
@@ -3147,6 +3556,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Kricketot!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     extraSprites: [PokemonExtraSprite.leftFacing],
+    originalSpriteSize: 24,
   },
   kricketune: {
     id: 402,
@@ -3155,6 +3565,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Kricketune!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     extraSprites: [PokemonExtraSprite.leftFacing],
+    originalSpriteSize: 36,
   },
   shinx: {
     id: 403,
@@ -3162,6 +3573,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Shinx!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   luxio: {
     id: 404,
@@ -3169,6 +3581,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Luxio!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 35,
   },
   luxray: {
     id: 405,
@@ -3176,6 +3589,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Luxray!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 40,
   },
   budew: {
     id: 406,
@@ -3183,6 +3597,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Budew!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 21,
   },
   roserade: {
     id: 407,
@@ -3191,6 +3606,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Roserade!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     extraSprites: [PokemonExtraSprite.leftFacing],
+    originalSpriteSize: 35,
   },
   cranidos: {
     id: 408,
@@ -3198,6 +3614,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Cranidos!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 35,
   },
   rampardos: {
     id: 409,
@@ -3205,6 +3622,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Rampardos!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 42,
   },
   shieldon: {
     id: 410,
@@ -3212,6 +3630,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Shieldon!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   bastiodon: {
     id: 411,
@@ -3219,6 +3638,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Bastiodon!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 39,
   },
   burmy_plant: {
     id: 412,
@@ -3226,6 +3646,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Burmy!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 21,
   },
   burmy_sandy: {
     id: 412,
@@ -3233,6 +3654,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Burmy!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 21,
   },
   burmy_trash: {
     id: 412,
@@ -3240,6 +3662,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Burmy!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 21,
   },
   wormadam_plant: {
     id: 413,
@@ -3247,6 +3670,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Wormadam!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   wormadam_sandy: {
     id: 413,
@@ -3254,6 +3678,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Wormadam!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   wormadam_trash: {
     id: 413,
@@ -3261,6 +3686,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Wormadam!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   mothim: {
     id: 414,
@@ -3269,6 +3695,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Mothim!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 35,
   },
   combee_male: {
     id: 415,
@@ -3277,6 +3704,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Combee!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 24,
   },
   combee_female: {
     id: 415,
@@ -3285,6 +3713,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Combee!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 24,
   },
   vespiquen: {
     id: 416,
@@ -3293,6 +3722,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Vespiquen!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 38,
   },
   pachirisu: {
     id: 417,
@@ -3300,6 +3730,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Pachirisu!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 27,
   },
   buizel: {
     id: 418,
@@ -3314,6 +3745,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Floatzel!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 37,
   },
   cherubi: {
     id: 420,
@@ -3321,6 +3753,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Cherubi!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 27,
   },
   cherrim: {
     id: 421,
@@ -3328,6 +3761,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Cherrim!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   shellos_west: {
     id: 422,
@@ -3335,6 +3769,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Shellos!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 24,
   },
   shellos_east: {
     id: 422,
@@ -3342,6 +3777,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Shellos!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 24,
   },
   gastrodon_west: {
     id: 423,
@@ -3349,6 +3785,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Gastrodon!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 35,
   },
   gastrodon_east: {
     id: 423,
@@ -3356,6 +3793,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Gastrodon!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 35,
   },
   ambipom: {
     id: 424,
@@ -3364,6 +3802,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Ambipom!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     extraSprites: [PokemonExtraSprite.leftFacing],
+    originalSpriteSize: 38,
   },
   drifloon: {
     id: 425,
@@ -3372,6 +3811,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Drifloon!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 27,
   },
   drifblim: {
     id: 426,
@@ -3380,6 +3820,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Drifblim!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 38,
   },
   buneary: {
     id: 427,
@@ -3388,6 +3829,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Buneary!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     extraSprites: [PokemonExtraSprite.leftFacing],
+    originalSpriteSize: 27,
   },
   lopunny: {
     id: 428,
@@ -3395,6 +3837,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Lopunny!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 38,
   },
   mismagius: {
     id: 429,
@@ -3402,6 +3845,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Mismagius!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 35,
   },
   honchkrow: {
     id: 430,
@@ -3410,6 +3854,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Honchkrow!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 35,
   },
   glameow: {
     id: 431,
@@ -3417,6 +3862,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Glameow!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   purugly: {
     id: 432,
@@ -3424,6 +3870,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Purugly!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 36,
   },
   chingling: {
     id: 433,
@@ -3431,6 +3878,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Chingling!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 21,
   },
   stunky: {
     id: 434,
@@ -3438,6 +3886,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Stunky!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 27,
   },
   skuntank: {
     id: 435,
@@ -3445,6 +3894,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Skuntank!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 36,
   },
   bronzor: {
     id: 436,
@@ -3452,6 +3902,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Bronzor!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   bronzong: {
     id: 437,
@@ -3459,6 +3910,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Bronzong!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 39,
   },
   bonsly: {
     id: 438,
@@ -3466,6 +3918,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Bonsly!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   mimeJr: {
     id: 439,
@@ -3473,6 +3926,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Mime Jr.!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 30,
   },
   happiny: {
     id: 440,
@@ -3480,6 +3934,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Happiny!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 30,
   },
   chatot: {
     id: 441,
@@ -3488,6 +3943,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Chatot!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 29,
   },
   spiritomb: {
     id: 442,
@@ -3495,6 +3951,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Spiritomb!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 36,
   },
   gible: {
     id: 443,
@@ -3518,6 +3975,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Gabite!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 40,
   },
   gabite_female: {
     id: 444,
@@ -3525,6 +3983,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Gabite!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 40,
   },
   garchomp: {
     id: 445,
@@ -3533,6 +3992,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Garchomp!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     extraSprites: [PokemonExtraSprite.leftFacing],
+    originalSpriteSize: 45,
   },
   garchomp_female: {
     id: 445,
@@ -3541,6 +4001,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Garchomp!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     extraSprites: [PokemonExtraSprite.leftFacing],
+    originalSpriteSize: 45,
   },
   munchlax: {
     id: 446,
@@ -3548,6 +4009,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Munchlax!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 30,
   },
   riolu: {
     id: 447,
@@ -3563,6 +4025,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Lucario!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 38,
   },
   hippopotas_male: {
     id: 449,
@@ -3570,6 +4033,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Hippopotas!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 33,
   },
   hippopotas_female: {
     id: 449,
@@ -3577,6 +4041,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Hippopotas!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 33,
   },
   hippowdon_male: {
     id: 450,
@@ -3584,6 +4049,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Hippowdon!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 45,
   },
   hippowdon_female: {
     id: 450,
@@ -3591,6 +4057,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Hippowdon!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 45,
   },
   skorupi: {
     id: 451,
@@ -3598,6 +4065,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Skorupi!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 33,
   },
   drapion: {
     id: 452,
@@ -3605,6 +4073,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Drapion!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 39,
   },
   croagunk: {
     id: 453,
@@ -3619,6 +4088,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Toxicroak!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 39,
   },
   carnivine: {
     id: 455,
@@ -3626,6 +4096,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Carnivine!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 40,
   },
   finneon: {
     id: 456,
@@ -3633,6 +4104,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Finneon!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 27,
   },
   lumineon: {
     id: 457,
@@ -3640,6 +4112,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Lumineon!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 38,
   },
   mantyke: {
     id: 458,
@@ -3647,6 +4120,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Mantyke!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 36,
   },
   snover: {
     id: 459,
@@ -3654,6 +4128,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Snover!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 36,
   },
   abomasnow: {
     id: 460,
@@ -3661,6 +4136,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Abomasnow!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 47,
   },
   weavile: {
     id: 461,
@@ -3668,6 +4144,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Weavile!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 37,
   },
   magnezone: {
     id: 462,
@@ -3675,6 +4152,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Magnezone!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 38,
   },
   lickilicky: {
     id: 463,
@@ -3682,6 +4160,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Lickilicky!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 43,
   },
   rhyperior: {
     id: 464,
@@ -3689,6 +4168,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Rhyperior!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 48,
   },
   tangrowth: {
     id: 465,
@@ -3696,6 +4176,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Tangrowth!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 45,
   },
   electivire: {
     id: 466,
@@ -3703,6 +4184,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Electivire!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 44,
   },
   magmortar: {
     id: 467,
@@ -3710,6 +4192,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Magmortar!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 42,
   },
   togekiss: {
     id: 468,
@@ -3719,6 +4202,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     extraSprites: [PokemonExtraSprite.leftFacing],
     isFlying: true,
+    originalSpriteSize: 41,
   },
   yanmega: {
     id: 469,
@@ -3727,6 +4211,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Yanmega!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 45,
   },
   leafeon: {
     id: 470,
@@ -3734,6 +4219,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Leafeon!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 36,
   },
   glaceon: {
     id: 471,
@@ -3741,6 +4227,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Glaceon!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 33,
   },
   gliscor: {
     id: 472,
@@ -3749,6 +4236,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Gliscor!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 45,
   },
   mamoswine: {
     id: 473,
@@ -3756,6 +4244,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Mamoswine!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 49,
   },
   porygonZ: {
     id: 474,
@@ -3763,6 +4252,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Porygon-Z!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 35,
   },
   gallade: {
     id: 475,
@@ -3770,6 +4260,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Gallade!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 42,
   },
   probopass: {
     id: 476,
@@ -3777,6 +4268,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Probopass!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 40,
   },
   dusknoir: {
     id: 477,
@@ -3784,6 +4276,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Dusknoir!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 47,
   },
   froslass: {
     id: 478,
@@ -3791,6 +4284,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Froslass!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 39,
   },
   rotom: {
     id: 479,
@@ -3798,6 +4292,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Rotom!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 24,
   },
   rotom_heat: {
     id: 479,
@@ -3805,6 +4300,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Rotom!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 24,
   },
   rotom_wash: {
     id: 479,
@@ -3813,6 +4309,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Rotom!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     extraSprites: [PokemonExtraSprite.leftFacing],
+    originalSpriteSize: 24,
   },
   rotom_frost: {
     id: 479,
@@ -3820,6 +4317,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Rotom!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 24,
   },
   rotom_fan: {
     id: 479,
@@ -3827,6 +4325,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Rotom!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 24,
   },
   rotom_mow: {
     id: 479,
@@ -3834,6 +4333,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Rotom!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 24,
   },
   uxie: {
     id: 480,
@@ -3841,6 +4341,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Uxie!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 24,
   },
   mesprit: {
     id: 481,
@@ -3848,6 +4349,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Mesprit!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 24,
   },
   azelf: {
     id: 482,
@@ -3855,6 +4357,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Azelf!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 24,
   },
   dialga: {
     id: 483,
@@ -3862,7 +4365,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Dialga!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
-    originalSpriteSize: 64,
+    originalSpriteSize: 63,
   },
   palkia: {
     id: 484,
@@ -3870,7 +4373,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Palkia!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
-    originalSpriteSize: 64,
+    originalSpriteSize: 58,
   },
   heatran: {
     id: 485,
@@ -3878,6 +4381,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Heatran!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 43,
   },
   regigigas: {
     id: 486,
@@ -3885,7 +4389,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Regigigas!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
-    originalSpriteSize: 64,
+    originalSpriteSize: 56,
   },
   giratina: {
     id: 487,
@@ -3893,7 +4397,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Giratina!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
-    originalSpriteSize: 64,
+    originalSpriteSize: 60,
   },
   giratina_origin: {
     id: 487,
@@ -3901,7 +4405,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Giratina!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
-    originalSpriteSize: 64,
+    originalSpriteSize: 60,
   },
   cresselia: {
     id: 488,
@@ -3910,6 +4414,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Cresselia!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 41,
   },
   phione: {
     id: 489,
@@ -3917,6 +4422,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Phione!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 27,
   },
   manaphy: {
     id: 490,
@@ -3924,6 +4430,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Manaphy!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 24,
   },
   darkrai: {
     id: 491,
@@ -3931,6 +4438,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Darkrai!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 41,
   },
   shaymin: {
     id: 492,
@@ -3938,6 +4446,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Shaymin!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 21,
   },
   shaymin_sky: {
     id: 492,
@@ -3947,6 +4456,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     extraSprites: [PokemonExtraSprite.leftFacing],
     isFlying: true,
+    originalSpriteSize: 21,
   },
   arceus: {
     id: 493,
@@ -3954,7 +4464,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Arceus!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
-    originalSpriteSize: 64,
+    originalSpriteSize: 53,
   },
   arceus_bug: {
     id: 493,
@@ -3962,6 +4472,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Arceus!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 53,
   },
   arceus_dark: {
     id: 493,
@@ -3969,7 +4480,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Arceus!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
-    originalSpriteSize: 64,
+    originalSpriteSize: 53,
   },
   arceus_dragon: {
     id: 493,
@@ -3977,7 +4488,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Arceus!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
-    originalSpriteSize: 64,
+    originalSpriteSize: 53,
   },
   arceus_electric: {
     id: 493,
@@ -3985,7 +4496,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Arceus!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
-    originalSpriteSize: 64,
+    originalSpriteSize: 53,
   },
   arceus_fighting: {
     id: 493,
@@ -3993,7 +4504,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Arceus!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
-    originalSpriteSize: 64,
+    originalSpriteSize: 53,
   },
   arceus_fire: {
     id: 493,
@@ -4001,7 +4512,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Arceus!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
-    originalSpriteSize: 64,
+    originalSpriteSize: 53,
   },
   arceus_flying: {
     id: 493,
@@ -4009,7 +4520,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Arceus!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
-    originalSpriteSize: 64,
+    originalSpriteSize: 53,
   },
   arceus_ghost: {
     id: 493,
@@ -4017,7 +4528,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Arceus!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
-    originalSpriteSize: 64,
+    originalSpriteSize: 53,
   },
   arceus_grass: {
     id: 493,
@@ -4025,7 +4536,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Arceus!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
-    originalSpriteSize: 64,
+    originalSpriteSize: 53,
   },
   arceus_ground: {
     id: 493,
@@ -4033,7 +4544,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Arceus!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
-    originalSpriteSize: 64,
+    originalSpriteSize: 53,
   },
   arceus_ice: {
     id: 493,
@@ -4041,7 +4552,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Arceus!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
-    originalSpriteSize: 64,
+    originalSpriteSize: 53,
   },
   arceus_poison: {
     id: 493,
@@ -4049,7 +4560,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Arceus!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
-    originalSpriteSize: 64,
+    originalSpriteSize: 53,
   },
   arceus_psychic: {
     id: 493,
@@ -4057,7 +4568,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Arceus!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
-    originalSpriteSize: 64,
+    originalSpriteSize: 53,
   },
   arceus_rock: {
     id: 493,
@@ -4065,7 +4576,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Arceus!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
-    originalSpriteSize: 64,
+    originalSpriteSize: 53,
   },
   arceus_steel: {
     id: 493,
@@ -4073,7 +4584,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Arceus!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
-    originalSpriteSize: 64,
+    originalSpriteSize: 53,
   },
   arceus_water: {
     id: 493,
@@ -4081,7 +4592,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen4,
     cry: 'Arceus!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
-    originalSpriteSize: 64,
+    originalSpriteSize: 53,
   },
   // Generation 5 (Unova starters)
   snivy: {
@@ -4162,6 +4673,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen5,
     cry: 'Patrat!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 29,
   },
   watchog: {
     id: 505,
@@ -4177,6 +4689,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen5,
     cry: 'Lillipup!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 27,
   },
   herdier: {
     id: 507,
@@ -4184,6 +4697,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen5,
     cry: 'Herdier!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 35,
   },
   stoutland: {
     id: 508,
@@ -4199,6 +4713,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen5,
     cry: 'Purrloin!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 27,
   },
   liepard: {
     id: 510,
@@ -4214,6 +4729,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen5,
     cry: 'Pansage!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 30,
   },
   simisage: {
     id: 512,
@@ -4221,6 +4737,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen5,
     cry: 'Simisage!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 37,
   },
   pansear: {
     id: 513,
@@ -4228,6 +4745,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen5,
     cry: 'Pansear!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 30,
   },
   simisear: {
     id: 514,
@@ -4235,6 +4753,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen5,
     cry: 'Simisear!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 36,
   },
   panpour: {
     id: 515,
@@ -4242,6 +4761,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen5,
     cry: 'Panpour!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 30,
   },
   simipour: {
     id: 516,
@@ -4249,6 +4769,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen5,
     cry: 'Simipour!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 36,
   },
   munna: {
     id: 517,
@@ -4256,6 +4777,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen5,
     cry: 'Munna!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 30,
   },
   musharna: {
     id: 518,
@@ -4263,6 +4785,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen5,
     cry: 'Musharna!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 37,
   },
   pidove: {
     id: 519,
@@ -4271,6 +4794,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Pidove!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 24,
   },
   tranquill: {
     id: 520,
@@ -4279,6 +4803,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Tranquill!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 30,
   },
   unfezant: {
     id: 521,
@@ -4287,6 +4812,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Unfezant!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 38,
   },
   blitzle: {
     id: 522,
@@ -4294,6 +4820,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen5,
     cry: 'Blitzle!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 33,
   },
   zebstrika: {
     id: 523,
@@ -4301,6 +4828,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen5,
     cry: 'Zebstrika!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 42,
   },
   roggenrola: {
     id: 524,
@@ -4308,6 +4836,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen5,
     cry: 'Roggenrola!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 27,
   },
   boldore: {
     id: 525,
@@ -4315,6 +4844,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen5,
     cry: 'Boldore!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 35,
   },
   gigalith: {
     id: 526,
@@ -4322,6 +4852,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen5,
     cry: 'Gigalith!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 43,
   },
   woobat: {
     id: 527,
@@ -4330,6 +4861,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Woobat!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 27,
   },
   swoobat: {
     id: 528,
@@ -4338,6 +4870,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     cry: 'Swoobat!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
     isFlying: true,
+    originalSpriteSize: 35,
   },
   drilbur: {
     id: 529,
@@ -4345,6 +4878,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen5,
     cry: 'Drilbur!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 24,
   },
   excadrill: {
     id: 530,
@@ -4359,6 +4893,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen5,
     cry: 'Audino!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 37,
   },
   timburr: {
     id: 532,
@@ -4366,6 +4901,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen5,
     cry: 'Timburr!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 30,
   },
   gurdurr: {
     id: 533,
@@ -4373,6 +4909,7 @@ export const POKEMON_DATA: { [key: string]: PokemonConfig } = {
     generation: PokemonGeneration.Gen5,
     cry: 'Gurdurr!',
     possibleColors: [PokemonColor.default, PokemonColor.shiny],
+    originalSpriteSize: 38,
   },
   conkeldurr: {
     id: 534,
