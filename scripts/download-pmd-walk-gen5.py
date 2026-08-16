@@ -206,9 +206,35 @@ def _save_gif(frames: list[Image.Image], frame_ms: list[int], out_path: Path) ->
     )
 
 
+def _per_frame_align(frames: list[Image.Image], target_w: int, target_h: int) -> list[Image.Image]:
+    """For each frame, tight-crop to its own non-transparent content and paste
+    into a (target_w, target_h) canvas horizontally centered and bottom-aligned.
+    This matches Gen 1-4 convention where the character's lowest visible pixel
+    sits at the frame bottom (so bottom-anchored CSS positioning puts feet at
+    the floor line, not hovering above it)."""
+    out = []
+    for f in frames:
+        bbox = f.getbbox()
+        if bbox is None:
+            # empty frame — just make a transparent canvas
+            out.append(Image.new("RGBA", (target_w, target_h), (0, 0, 0, 0)))
+            continue
+        content = f.crop(bbox)
+        canvas = Image.new("RGBA", (target_w, target_h), (0, 0, 0, 0))
+        x = (target_w - content.width) // 2
+        y = target_h - content.height  # bottom-align
+        canvas.paste(content, (x, y), content)
+        out.append(canvas)
+    return out
+
+
 def build_pokemon(dex: int, name: str, *, dry_run: bool) -> tuple[str, str]:
-    """Build both idle and walk with matching dimensions (bottom-aligned).
-    Returns (walk_status, idle_status)."""
+    """Build both idle and walk. For each pokemon, compute a shared canvas size
+    from the max content width and height across all idle+walk frames, then
+    place every frame's content bottom-center anchored. This gives:
+      - identical dims across idle and walk (no floating jump between states)
+      - character's feet at frame bottom (matches Gen 1-4 convention)
+      - horizontal center consistent (no sliding-sideways)"""
     idle_result = _fetch_frames(dex, "Idle")
     walk_result = _fetch_frames(dex, "Walk")
 
@@ -220,27 +246,41 @@ def build_pokemon(dex: int, name: str, *, dry_run: bool) -> tuple[str, str]:
     if not (idle_ok or walk_ok):
         return walk_status, idle_status
 
-    # Determine common frame dimensions so idle and walk align at the feet.
     all_frames: list[Image.Image] = []
     if idle_ok:
         all_frames.extend(idle_result[0])
     if walk_ok:
         all_frames.extend(walk_result[0])
-    target_w = max(f.width for f in all_frames)
-    target_h = max(f.height for f in all_frames)
+
+    # Compute max content dims across all per-frame bounding boxes.
+    max_w = 0
+    max_h = 0
+    for f in all_frames:
+        bbox = f.getbbox()
+        if bbox is None:
+            continue
+        max_w = max(max_w, bbox[2] - bbox[0])
+        max_h = max(max_h, bbox[3] - bbox[1])
+    if max_w == 0 or max_h == 0:
+        return walk_status, idle_status
 
     if dry_run:
         return walk_status, idle_status
 
     if idle_ok:
         idle_frames, idle_ms = idle_result
-        idle_padded = [_pad_frame(f, target_w, target_h) for f in idle_frames]
-        _save_gif(idle_padded, idle_ms, MEDIA_DIR / name / "default_idle_8fps.gif")
-
+        _save_gif(
+            _per_frame_align(idle_frames, max_w, max_h),
+            idle_ms,
+            MEDIA_DIR / name / "default_idle_8fps.gif",
+        )
     if walk_ok:
         walk_frames, walk_ms = walk_result
-        walk_padded = [_pad_frame(f, target_w, target_h) for f in walk_frames]
-        _save_gif(walk_padded, walk_ms, MEDIA_DIR / name / "default_walk_8fps.gif")
+        _save_gif(
+            _per_frame_align(walk_frames, max_w, max_h),
+            walk_ms,
+            MEDIA_DIR / name / "default_walk_8fps.gif",
+        )
 
     return walk_status, idle_status
 
