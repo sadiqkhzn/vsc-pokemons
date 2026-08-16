@@ -234,8 +234,12 @@ export class PokemonSpecification {
     } else {
       this.name = name;
     }
-    this.generation = generation || `gen${POKEMON_DATA[type].generation}`;
-    this.originalSpriteSize = POKEMON_DATA[type].originalSpriteSize || 32;
+    // Fallback to Bulbasaur if the saved type no longer exists in POKEMON_DATA
+    // (e.g. workspace state persisted a pokemon that was later removed, like the
+    // Mega Evolutions we removed in PR #32). Prevents `pokemonView` load crash.
+    const config = POKEMON_DATA[type] ?? POKEMON_DATA.bulbasaur;
+    this.generation = generation || `gen${config.generation}`;
+    this.originalSpriteSize = config.originalSpriteSize || 32;
   }
 
   static fromConfiguration(): PokemonSpecification {
@@ -275,6 +279,12 @@ export class PokemonSpecification {
     );
     var result: PokemonSpecification[] = [];
     for (let index = 0; index < contextTypes.length; index++) {
+      // Skip any pokemon type that no longer exists (e.g. removed Mega
+      // Evolutions from PR #32). Their entries stay in workspace state until
+      // the collection is next persisted, but we don't try to instantiate them.
+      if (!POKEMON_DATA[contextTypes[index]]) {
+        continue;
+      }
       result.push(
         new PokemonSpecification(
           contextColors?.[index] ?? DEFAULT_COLOR,
