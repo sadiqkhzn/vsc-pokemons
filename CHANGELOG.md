@@ -5,18 +5,26 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
-
-Nothing yet.
-
-## [1.1.1] - 2026-08
+## [1.2.0] - 2026-09
 
 ### Added
-- **Gen 5 (Unova)** — all 156 Pokémon (#495-#649) with animated default and shiny sprites (Snivy line through Genesect). Flying-type Pokémon flagged with `isFlying` for aerial behavior.
-- **Gen 6 introduced** — `PokemonGeneration.Gen6` enum value and `gen6` locale key.
-- **50 Mega Evolutions & Primal Reversions** — 15 Kanto, 6 Johto, 20 Hoenn, 5 Sinnoh, 2 later-era (Audino, Diancie), 2 Primals (Kyogre, Groudon). Aerial megas flagged `isFlying`.
-- **New command:** `Spawn a Random Mega Evolution` (`vscode-pokemon.spawn-random-mega`) that picks a random Gen 6 mega/primal.
-- **`getRandomMegaConfig()` helper** in `pokemon-data.ts` for filtering to Gen 6 forms.
+- **Gen 5 (Unova)** — all 156 Pokémon (#495-#649) with animated PMD walk + idle sprites (Snivy line through Genesect). Flying-type Pokémon flagged with `isFlying` for aerial behavior. Sprites sourced from PMDCollab/SpriteCollab (14 stragglers without PMD data fall back to PokeAPI Showdown mirror).
+- **Gen 6 Kalos species** — all 72 Pokémon (#650-#721) from Chespin through Volcanion.
+- **Real-height-based sprite sizing** — every Pokémon's `originalSpriteSize` derived from its actual Pokédex height (Bulbasaur 0.7m = 32px anchor, cube-root scaling, clamped [22, 58]). Wailord truly dwarfs Diglett, Snorlax visibly smaller than Dialga, etc.
+- **Canvas normalization** — pokemon with 64x64 sprite canvases (Dialga, Lugia, etc.) automatically get 2x `originalSpriteSize` so their character-within-frame renders at the intended proportional size.
+
+### Changed
+- README, ARCHITECTURE, SPRITES, and CONTRIBUTING docs updated to reflect Gen 1-6 coverage.
+- `package.json` description bumped to mention 790+ Pokémon.
+- `package.json` keywords expanded (`gen5`, `gen6`, `kanto`, `unova`) and alphabetized.
+- CHANGELOG.md added following Keep a Changelog format.
+- Pull request template added under `.github/pull_request_template.md`.
+
+### Fixed
+- Extension no longer crashes on `pokemonView` load if workspace state references a removed Pokémon type (defensive fallback to Bulbasaur in `PokemonSpecification` constructor + skip-unknown filtering in `collectionFromMemento`).
+
+### Removed
+- Mega Evolutions and Primal Reversions — added in development, then removed prior to release because PMD SpriteCollab has no mega walk animations, forcing megas to appear as "sliding" idle sprites. Preserved on branch `wip/mega-evolutions` for future revisit if a proper sprite source is found.
 
 ### Changed
 - README, ARCHITECTURE, SPRITES, and CONTRIBUTING docs updated to reflect Gen 1-6 coverage.

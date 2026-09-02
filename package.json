@@ -1,8 +1,8 @@
 {
     "name": "pokemon-companions-vscode",
     "displayName": "Pokémon Companions",
-    "description": "Bring magical Pokémon companions to life in your VS Code workspace — 720+ animated Pokémon spanning Gen 1 through Gen 6 (Kalos species), with flying creatures that soar across your editor.",
-    "version": "1.2.2",
+    "description": "Bring magical Pokémon companions to life in your VS Code workspace — 790+ animated Pokémon spanning Gen 1 through Gen 6 (Kalos species), with flying creatures that soar across your editor.",
+    "version": "1.2.0",
     "engines": {
         "vscode": "^1.73.0"
     },
@@ -27,7 +27,6 @@
         "gen5",
         "gen6",
         "kanto",
-        "mega evolution",
         "pets",
         "pokemon",
         "pokémon",
