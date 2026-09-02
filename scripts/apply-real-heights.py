@@ -3,11 +3,12 @@
 Set originalSpriteSize per pokemon based on real Pokedex height.
 
 Reference: Bulbasaur at 0.7m -> 32 (matches how Gen 1-4 already renders).
-Formula:   size = clamp(round(32 * (h_m / 0.7) ** (1/3)), 20, 96)
+Formula:   size = clamp(round(32 * (h_m / 0.7) ** (1/4)), 22, 64)
 
-Cube-root scaling keeps giants (Wailord 14.5m) and tinies (Diglett 0.2m) both
-representable while preserving proportional truth (Wailord bigger, Diglett
-smaller, Zekrom smaller than Dialga because it actually is).
+Fourth-root scaling (softer than cube root) prevents giants like Wailord
+(14.5m) and Onix (8.8m) from dominating the panel while keeping the smallest
+pokemon like Joltik (0.1m) visible. Wailord/Diglett end at ~2.8x apart on
+screen instead of 4.2x, and small mons stay cute-and-readable at 22-28 px.
 
 Updates only Gen 5 and Gen 6 entries. Skips Gen 1-4 which are already tuned.
 Skips size 32 (extension default) so we don't add redundant fields.
@@ -31,7 +32,7 @@ UA = "vsc-pokemons-sizer/1.0 (github.com/sadiqkhzn/vsc-pokemons)"
 
 
 def size_for(h_m: float) -> int:
-    return max(20, min(96, round(REF_S * (h_m / REF_H) ** (1 / 3))))
+    return max(22, min(64, round(REF_S * (h_m / REF_H) ** (1 / 4))))
 
 
 def load_cache() -> dict[str, float]:
@@ -73,7 +74,7 @@ def parse_entries(content: str) -> list[tuple[str, int, int]]:
         content, flags=re.MULTILINE,
     ):
         key, dex, gen = m.group(1), int(m.group(2)), int(m.group(3))
-        if gen in (5, 6) and key not in seen:
+        if key not in seen:
             out.append((key, dex, gen))
             seen.add(key)
     # Multi-line
@@ -82,7 +83,7 @@ def parse_entries(content: str) -> list[tuple[str, int, int]]:
         content, flags=re.MULTILINE,
     ):
         key, dex, gen = m.group(1), int(m.group(2)), int(m.group(3))
-        if gen in (5, 6) and key not in seen:
+        if key not in seen:
             out.append((key, dex, gen))
             seen.add(key)
     return out
