@@ -3,12 +3,13 @@
 Set originalSpriteSize per pokemon based on real Pokedex height.
 
 Reference: Bulbasaur at 0.7m -> 32 (matches how Gen 1-4 already renders).
-Formula:   size = clamp(round(32 * (h_m / 0.7) ** (1/4)), 22, 64)
+Formula:   size = clamp(round(32 * (h_m / 0.7) ** (1/3)), 22, 58)
 
-Fourth-root scaling (softer than cube root) prevents giants like Wailord
-(14.5m) and Onix (8.8m) from dominating the panel while keeping the smallest
-pokemon like Joltik (0.1m) visible. Wailord/Diglett end at ~2.8x apart on
-screen instead of 4.2x, and small mons stay cute-and-readable at 22-28 px.
+Cube-root scaling with a tight [22, 58] cap. Cube root preserves proportional
+spread at mid-range so similar-height pokemon (Gligar 1.1m vs Snorlax 2.1m)
+look distinctly different, while the 58-pixel cap prevents giants (Wailord
+14.5m, Onix 8.8m) from dominating the panel. All huge legendaries cluster at
+58 which is a fair tradeoff for realistic mid-range proportions.
 
 Updates only Gen 5 and Gen 6 entries. Skips Gen 1-4 which are already tuned.
 Skips size 32 (extension default) so we don't add redundant fields.
@@ -32,7 +33,7 @@ UA = "vsc-pokemons-sizer/1.0 (github.com/sadiqkhzn/vsc-pokemons)"
 
 
 def size_for(h_m: float) -> int:
-    return max(22, min(64, round(REF_S * (h_m / REF_H) ** (1 / 4))))
+    return max(22, min(58, round(REF_S * (h_m / REF_H) ** (1 / 3))))
 
 
 def load_cache() -> dict[str, float]:
