@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.2.0] - 2026-09
 
+### Upgrading from 1.1.0
+
+Your existing Pokémon collection is preserved — no action needed. Every Gen 1-4 Pokémon that 1.1.0 shipped is still present, so nothing gets orphaned. You may notice existing companions rendering at slightly different sizes after upgrade, because sprite sizes are now derived from real Pokédex heights (Bulbasaur 0.7m stays the reference at 32 px, everything else scales proportionally). This is intentional; no action needed.
+
 ### Added
 - **Gen 5 (Unova)** — all 156 Pokémon (#495-#649) with animated PMD walk + idle sprites (Snivy line through Genesect). Flying-type Pokémon flagged with `isFlying` for aerial behavior. Sprites sourced from PMDCollab/SpriteCollab (14 stragglers without PMD data fall back to PokeAPI Showdown mirror).
 - **Gen 6 Kalos species** — all 72 Pokémon (#650-#721) from Chespin through Volcanion.
