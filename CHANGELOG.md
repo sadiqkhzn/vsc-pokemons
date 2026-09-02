@@ -26,11 +26,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 - Mega Evolutions and Primal Reversions — added in development, then removed prior to release because PMD SpriteCollab has no mega walk animations, forcing megas to appear as "sliding" idle sprites. Preserved on branch `wip/mega-evolutions` for future revisit if a proper sprite source is found.
 
-### Changed
-- README, ARCHITECTURE, SPRITES, and CONTRIBUTING docs updated to reflect Gen 1-6 coverage.
-- `package.json` description bumped to mention 770+ Pokémon.
-- `package.json` keywords expanded (`gen5`, `gen6`, `mega evolution`, `kanto`, `unova`) and alphabetized.
-
 ## [1.1.0] - Earlier
 
 - Enhanced flying Pokémon behavior with diagonal movement and viewport boundaries.
